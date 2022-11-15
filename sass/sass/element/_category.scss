@@ -1,0 +1,46 @@
+.category {
+    @extend %clearfix;
+    text-align: left;
+    margin: 1em auto 1em;
+    ul {
+        @include li-reset;
+        li {
+            margin: 0px 5px 5px 0px;
+            display: block;
+            float: left;
+        }
+    }
+    a {
+        border: 1px solid #408620!important;
+        padding: .4em 1em;
+        display: block;
+        color: #fff!important;
+        box-sizing: border-box;
+        border-radius:5px;
+        background-color:#408620 !important;
+        font-size: 1.125em;
+
+        &:hover,
+        &:focus {
+            color: #FFF;
+           background-color:#1a8096!important;
+            border: 1px solid #1a8096!important;
+            box-shadow: none;
+        }
+        &.active {
+            color: #FFF;
+           background-color:#1a8096!important;
+        }
+        span {
+          
+            &:before {
+                content: "(";
+                display: inline-block;
+            }
+            &:after {
+                content: ")";
+                display: inline-block;
+            }
+        }
+    }
+}

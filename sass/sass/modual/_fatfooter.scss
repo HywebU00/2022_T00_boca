@@ -1,0 +1,128 @@
+.fatfooter {
+    @extend %clearfix;
+    overflow: hidden;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    background: rgb(192, 231, 147);
+    background: linear-gradient(90deg, rgba(192, 231, 147, 1) 0%, rgba(169, 227, 250, 1) 100%);
+    @include screen('mobile') {
+        display: none;
+    }
+    .container {
+        overflow: hidden;
+        box-sizing: border-box;
+        @include gutter(200px);
+        position: relative;
+    }
+    // 按鈕
+    .btn-fatfooter {
+        font-size: .813em;
+        display: block;
+        width: 6em;
+        color: #FFF;
+        border: none;
+        background: #000;
+        position: absolute;
+        right: 50%;
+        z-index: 90;
+        text-indent: -9999px;
+        border-radius: 0 0 5px 5px;
+        margin-right: -3em;
+        margin-top: 0;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #FFF;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 12px;
+            margin-left: -6px;
+            transition: .3s ease-out;
+        }
+        &:hover {
+            background: darken($aHover, 20);
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        &.close {
+            &:before {
+                transform: rotate(135deg) !important;
+                top: 5px;
+            }
+        }
+    }
+    nav {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding: 3em 0 0 0;
+        box-sizing: border-box;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            @include li-reset;
+            li {
+                flex: 0 1 18%;
+                margin: 0 1%;
+                box-sizing: border-box;
+                @include screen('tablet') {
+                    flex: 0 1 23%;
+                }
+                a {
+                    line-height: 1.5;
+                    display: block;
+                    font-weight: bold;
+                    padding: .5em;
+                    box-sizing: border-box;
+                    color: $color-word;
+                    border-radius: 3px;
+                    font-size: 1.188em;
+                    &:hover {
+                        box-shadow: none;
+                        &:hover {
+                            background-color: #FFF;
+                        }
+                    }
+                }
+                ul {
+                    // display: flex;
+                    // flex-direction:column;
+                    // flex-wrap:wrap;
+                    display: block;
+                    margin: 0 0 2em;
+                    padding: 0 1em 0 0;
+                    @include screen('mobile') {
+                        width: auto;
+                    }
+                    li {
+                        // flex: 0 0 100%;
+                        a {
+                            display: block;
+                            color: $color-word;
+                            font-weight: normal;
+                            text-align: left;
+                            font-size: 1em;
+                            line-height: 1.5em;
+                            padding: .5em;
+                            background: none;
+                        }
+                    }
+                    //第三層關閉
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

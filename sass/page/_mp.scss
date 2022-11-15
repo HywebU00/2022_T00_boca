@@ -1,0 +1,1342 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// more按鈕
+a.more {
+    display: block;
+    width: 10em;
+    text-align: center;
+    height: 2.5em;
+    margin: .5em auto .5em;
+    line-height: 2.5;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    &:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 2px solid #FFF;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -10px;
+        top: 14px;
+        border-left: none;
+        border-bottom: none;
+        transition: .3s ease-out;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $primaryColor;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+        color: white;
+        &:before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        &:after {
+            right: 15px;
+        }
+    }
+}
+.more {
+    display: flex;
+    justify-content: center;
+    a {
+        display: block;
+        padding: 0.7em 0.8em;
+        min-width: 240px;
+        background-color: #fff;
+        color: $color-word;
+        border-radius: 50px;
+        background: rgb(8, 127, 201);
+        background: linear-gradient(119deg, rgba(8, 127, 201, 1) 0%, rgba(34, 172, 56, 1) 100%);
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        font-weight: bolder;
+        font-size: 1.125em;
+        transition: .5s;
+        &:before {
+            content: '';
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background-color: #fff;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            bottom: 2px;
+            left: 2px;
+            border-radius: 50px;
+            z-index: -1;
+            transition: .5s;
+        }
+        &:after {
+            content: '';
+            width: 32px;
+            height: 10px;
+            background-image: url('../images/more_icon.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 1em;
+            top: 1em;
+            transition: .5s;
+        }
+        &:hover {
+            color: $aHover;
+            background: rgb(34, 172, 56);
+            background: linear-gradient(119deg, rgba(34, 172, 56, 1) 0%, rgba(8, 127, 201, 1) 100%);
+            &:before {
+                background-color: #eee;
+            }
+            &:after {
+                right: 2em;
+            }
+        }
+    }
+}
+// 範例：
+// .demosection {
+//     [class^="col"] {
+//         border: 2px solid #FFF;
+//         background: #DEDEDE;
+//     }
+// }
+// 快捷列
+.fixed_sidebar_group_left {
+    position: fixed;
+    left: calc(50vw - 700px);
+    top: 28%;
+    z-index: 10;
+    @media(max-width: 1400px) {
+        left: 10px;
+    }
+    @include screen('tablet') {
+        top: 11%;
+    }
+    @include screen('mobile') {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        top: auto;
+        margin: 0em 2em 2em;
+        left: 0;
+    }
+    // @include screen('mobile'){
+    //      margin: 2em ;
+    // }
+    .sidebar_list {
+        margin-bottom: 5px;
+        display: block;
+        position: relative;
+        // @include screen('tablet') {
+        //     flex: 0 0 30%;
+        //     max-width: 23%;
+        //     margin: 0 1.66% 1em;
+        // }
+        @include screen('mobile') {
+            flex: 0 0 48%;
+            max-width: 48%;
+            margin: 0 1% 1em;
+        }
+        @media(max-width: 500px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin: 0 0 .5em;
+        }
+        a {
+            display: flex;
+            white-space: nowrap;
+            padding: 0;
+            color: #fff;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            background-color: #1d75ce;
+            border-radius: 50px;
+            box-sizing: border-box;
+            @include screen('mobile') {
+                width: 100%;
+            }
+            &.passport {
+                background-color: #009e96;
+            }
+            &.contact {
+                background-color: #E77605;
+            }
+            &.document {
+                background-color: #6D97CF;
+            }
+            &.news {
+                background-color: #8f82bc;
+            }
+            &.video {
+                background-color: #da7679;
+            }
+            &.picture {
+                background-color: #D6749E;
+            }
+            .list_img {
+                margin: 5px 0;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    vertical-align: middle;
+                }
+                @include screen('mobile') {
+                    flex: 0 0 auto;
+                    flex-basis: 50px;
+                }
+            }
+            .list_title {
+                display: none;
+                font-size: 1.25em;
+                overflow: hidden;
+                margin-right: 20px;
+                @include screen('mobile') {
+                    display: block;
+                    @include text-overflow;
+                }
+            }
+            &:hover,
+            &:focus {
+                width: auto;
+                text-decoration: none;
+                box-shadow: none;
+                .list_title {
+                    display: block;
+                    animation-name: titletranslate;
+                    animation-duration: .5s;
+                }
+            }
+            @keyframes titletranslate {
+                from {
+                    margin-left: -50px;
+                    opacity: 0;
+                }
+                to {
+                    margin-left: 0px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+// 分享快捷列
+.fixed_share_group_right {
+    position: fixed;
+    right: calc(50vw - 700px);
+    top: 28%;
+    z-index: 10;
+    @media(max-width: 1400px) {
+        right: 10px;
+    }
+    @include screen('tablet') {
+        top: 11%;
+    }
+    @include screen('mobile') {
+        bottom: 70px;
+        right: 10px;
+        top: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .share_btn {
+        display: none;
+        @include screen('mobile') {
+            display: block;
+        }
+        a {
+            font-size: 0;
+            background-image: url('../images/basic/icon_share.svg');
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            display: block;
+        }
+    }
+    .sidebar_group {
+        display: block;
+        @include screen('mobile') {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            margin-bottom: 5px;
+            padding: 5px 5px 0;
+            box-sizing: border-box;
+            display: none;
+            .sidebar_list {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                    .list_img {
+                        width: 40px;
+                        height: 40px;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                    .list_title {
+                        font-size: 0;
+                        margin-left: 0;
+                    }
+                    &:hover,
+                    &:focus {
+                        width: 40px;
+                        text-decoration: none;
+                        box-shadow: none;
+                        .list_title {
+                            animation-name: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sidebar_list {
+        margin-bottom: 5px;
+        display: block;
+        position: relative;
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        a {
+            display: flex;
+            white-space: nowrap;
+            justify-content: flex-end;
+            padding: 0;
+            color: #fff;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            background-color: transparent;
+            border-radius: 50px;
+            box-sizing: border-box;
+            &.line {
+                background-color: #32AA49;
+            }
+            &.app {
+                background-color: #1d75ce;
+            }
+            &.mail {
+                background-color: #E87400;
+            }
+            &.Youtube {
+                background-color: #b62122;
+            }
+            &.flickr {
+                background-color: #e5e5e5;
+            }
+            &.rss {
+                background-color: #E67619;
+            }
+            .list_img {
+                margin: 5px 0;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                order: 1;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    vertical-align: middle;
+                }
+            }
+            .list_title {
+                display: none;
+                font-size: 1.25em;
+                overflow: hidden;
+                margin-left: 20px;
+                order: 0;
+            }
+            &:hover,
+            &:focus {
+                width: auto;
+                text-decoration: none;
+                box-shadow: none;
+                &.flickr {
+                    color: $color-word;
+                }
+                .list_title {
+                    display: block;
+                    animation-name: titletranslate2;
+                    animation-duration: .5s;
+                }
+            }
+            @keyframes titletranslate2 {
+                from {
+                    margin-right: -50px;
+                    opacity: 0;
+                }
+                to {
+                    margin-right: 0px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+// 大圖區塊
+.bigpicture_slider_block {
+    position: relative;
+    padding: 60px 0 80px;
+    // 首頁大圖輪播 
+    .bigpicture_Slider {
+        width: 75%;
+        margin: 0 auto;
+        @include gutter(0);
+        @include screen('mobile') {
+            width: 90%;
+        }
+        .bigpicture_group {
+            a {
+                .images {
+                    display: block;
+                    padding: 0;
+                    position: relative;
+                    margin-bottom: 20px;
+                    @include aspect-ratio(5,
+                    2); //PC版比例
+                    // @include screen('tablet') {
+                    //     @include aspect-ratio(5,
+                    //     3); //Mobile版比例
+                    // }
+                }
+                .caption {
+                    position: relative;
+                    color: $color-word;
+                    text-align: center;
+                    font-size: 1.125em;
+                }
+                &:focus {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: 2;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+                &:focus-visible {
+                    &:before {
+                        box-shadow: 0 0px 0px 2px $aFocus inset;
+                    }
+                }
+            }
+        }
+        /* ---點的位置、大小、顏色---*/
+        .slick-dots {
+            bottom: -40px;
+        }
+        // 箭頭
+        .slick-prev {
+            left: -80px;
+            background-size: 80px 80px;
+            background-color: transparent;
+            @include screen('tablet') {
+                top: 35%;
+                left: -40px;
+            }
+            @include screen('mobile') {
+                left: -40px;
+            }
+            @include screen('xs_mobile') {
+                background-size: 60px 60px;
+                width: 60px;
+                height: 60px;
+                left: -20px
+            }
+        }
+        .slick-next {
+            right: -80px;
+            background-size: 80px 80px;
+            background-color: transparent;
+            @include screen('tablet') {
+                top: 35%;
+                right: -40px;
+            }
+            @include screen('mobile') {
+                right: -40px;
+            }
+            @include screen('xs_mobile') {
+                background-size: 60px 60px;
+                width: 60px;
+                height: 60px;
+                right: -20px;
+            }
+        }
+    }
+}
+// 最新消息
+.news_block {
+    background-color: #b0d9ef;
+    padding: 70px 0;
+    background-image: url('../images/news_block_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    .container {
+        @include gutter(200px);
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .tabSet {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 40px 60px 30px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        @include screen('tablet') {
+            padding: 40px 40px 30px;
+        }
+        @include screen('mobile') {
+            padding: 30px 30px 30px;
+        }
+    }
+}
+// 旅遊區塊
+.travel_block {
+    background-color: #ffffff;
+    padding: 130px 0 100px;
+    background-image: url('../images/travel_block_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    .container {
+        @include gutter(200px);
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .more {
+        a {
+            min-width: 180px;
+        }
+    }
+    .travel_group {
+        display: flex;
+        @include screen('tablet') {
+            flex-wrap: wrap;
+        }
+        // 最新旅遊警示
+        .travel_alert_block {
+            flex: 1 1 auto;
+            flex-basis: 60%;
+            @include screen('tablet') {
+                flex-basis: 100%;
+                margin-bottom: 3em;
+            }
+            .alert_block {
+                background-color: #fff;
+                border-radius: 15px;
+                padding: 30px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 0 15px;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        flex: 0 0 auto;
+                        flex-basis: 50%;
+                        padding: 0 10px 0 0;
+                        margin-bottom: 15px;
+                        box-sizing: border-box;
+                        font-weight: bolder;
+                        display: flex;
+                        align-items: flex-start;
+                        color: $color-word;
+                        @include screen('xs_mobile') {
+                            flex-basis: 100%;
+                            padding: 0;
+                        }
+                        span {
+                            flex: 0 0 auto;
+                            flex-basis: 24px;
+                            width: 24px;
+                            height: 24px;
+                            display: inline-block;
+                            margin-right: 15px;
+                            background-color: #959595;
+                            border-radius: 2px;
+                            font-size: 0;
+                            &.redblock {
+                                background-color: #e60012;
+                            }
+                            &.yellowblock {
+                                background-color: #fff100;
+                            }
+                            &.orangeblock {
+                                background-color: #f39800;
+                            }
+                            &.graylock {
+                                background-color: #959595;
+                            }
+                        }
+                    }
+                }
+                .remark {
+                    color: $color-word;
+                    a {
+                        display: block;
+                        font-weight: bolder;
+                    }
+                }
+            }
+            %alert_color {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                margin-right: 15px;
+                background-color: #959595;
+                border-radius: 2px;
+                font-size: 0;
+                flex: 0 0 auto;
+                flex-basis: 24px;
+            }
+            .alert_nation_list {
+                ul {
+                    margin: 20px 20px 40px;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        a {
+                            padding: .6em 0;
+                            display: block;
+                            font-weight: bolder;
+                            display: flex;
+                            align-items: flex-start;
+                            .date {
+                                color: #707070;
+                                display: block;
+                                margin-right: 15px;
+                                white-space: nowrap;
+                                flex: 0 0 auto;
+                                flex-basis: 70px;
+                            }
+                            .redblock {
+                                @extend %alert_color;
+                                background-color: #e60012;
+                            }
+                            .yellowblock {
+                                @extend %alert_color;
+                                background-color: #fff100;
+                            }
+                            .orangeblock {
+                                @extend %alert_color;
+                                background-color: #f39800;
+                            }
+                            .graylock {
+                                @extend %alert_color;
+                                background-color: #959595;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 旅外安全
+        .travel_safety_block {
+            flex: 1 1 auto;
+            flex-basis: 40%;
+            @include screen('tablet') {
+                flex-basis: 100%;
+            }
+            .safety_list {
+                margin: 0 0 0 15%;
+                @include screen('tablet') {
+                    margin: 0;
+                }
+                ul {
+                    margin: 0 0 30px;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        margin-bottom: 10px;
+                        a {
+                            background-color: $linkColor;
+                            border-radius: 15px;
+                            padding: 8px 30px;
+                            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                            color: $color-word;
+                            display: block;
+                            font-weight: bolder;
+                            font-size: 1.188em;
+                            min-height: 75px;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            transition: .5s;
+                            img {
+                                margin-right: 20px;
+                                flex: 0 0 60px;
+                                flex-basis: 60px;
+                            }
+                            span {
+                                flex: 0 0 auto;
+                                flex-basis: calc(100% - 80px);
+                            }
+                            &:hover {
+                                background-color: $lightColor;
+                            }
+                        }
+                    }
+                }
+            }
+            .more {
+                margin: 0 0 0 15%;
+            }
+        }
+    }
+}
+// 申辦護照
+.apply_passport_block {
+    background-color: #bfe792;
+    padding: 120px 0 80px;
+    background-image: url('../images/apply_passport_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    &:after {
+        content: '';
+        background-image: url('../images/passport_bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 608px;
+        height: 483px;
+        position: absolute;
+        right: 0;
+        top: -179px;
+        z-index: 0;
+        transition: .5s;
+        @media(max-width: 1200px) {
+            right: -20%;
+        }
+    }
+    .container {
+        @include gutter(200px);
+        position: relative;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .apply_passport_group {
+        position: relative;
+        z-index: 9;
+    }
+}
+// 國人旅外及外籍人士來臺資訊
+.people_exchanges_block {
+    display: block;
+    background-color: #fff;
+    padding: 80px 0 60px;
+    background-image: url('../images/people_exchanges_bg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    .container {
+        @include gutter(200px);
+        position: relative;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .people_exchanges_group {
+        display: flex;
+        margin-bottom: 2em;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
+        // 國人旅外
+        .travel_abroad_block {
+            flex: 1 1 49%;
+            flex-basis: 49%;
+            margin-right: 1%;
+            background: rgb(182, 230, 142);
+            background: linear-gradient(180deg, rgba(182, 230, 142, 1) 0%, rgba(120, 203, 101, 1) 100%);
+            border-radius: 15px;
+            padding: 30px 45px 45px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            @include screen('tablet') {
+                padding: 30px;
+            }
+            @include screen('mobile') {
+                flex: 1 1 100%;
+                flex-basis: 100%;
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+            .title {
+                font-size: 1.5em;
+                font-weight: bolder;
+                color: $color-word;
+                text-align: center;
+                margin-bottom: 15px;
+                img {
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+            .remark {
+                color: $color-word;
+                line-height: 1.6em;
+                margin: 0 0 .8em;
+                font-size: 1.125em;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        padding: 1em;
+                        display: block;
+                        background-color: #fff;
+                        color: $color-word;
+                        border-radius: 5px;
+                        font-weight: bolder;
+                        font-size: 1.125em;
+                        &:hover {
+                            color: $color-green;
+                        }
+                    }
+                }
+            }
+        }
+        // 外籍人士來臺
+        .cometo_taiwan_block {
+            flex: 1 1 49%;
+            flex-basis: 49%;
+            margin-left: 1%;
+            background: rgb(169, 227, 250);
+            background: linear-gradient(180deg, rgba(169, 227, 250, 1) 0%, rgba(103, 182, 242, 1) 100%);
+            border-radius: 15px;
+            padding: 30px 45px 45px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            @include screen('tablet') {
+                padding: 30px;
+            }
+            @include screen('mobile') {
+                flex: 1 1 100%;
+                flex-basis: 100%;
+                margin-left: 0;
+            }
+            .title {
+                font-size: 1.5em;
+                font-weight: bolder;
+                color: $color-word;
+                text-align: center;
+                margin-bottom: 15px;
+                img {
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    margin-bottom: 5px;
+                    position: relative;
+                    a {
+                        padding: 1em;
+                        display: block;
+                        background-color: #fff;
+                        color: $color-word;
+                        border-radius: 5px;
+                        font-weight: bolder;
+                        font-size: 1.125em;
+                        &:hover {
+                            color: $aHover;
+                        }
+                    }
+                    &.visaform {
+                        a {
+                            display: block;
+                            background-color: $lightColor;
+                            color: $color-word;
+                            position: relative;
+                            padding: 1em 1em 3em;
+                            &:after {
+                                content: '';
+                                width: 32px;
+                                height: 10px;
+                                background-image: url('../images/more_icon.png');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                position: absolute;
+                                bottom: 1.5em;
+                                right: 2em;
+                                transition: .5s;
+                            }
+                            span {
+                                font-size: 0.875em;
+                                display: block;
+                                font-weight: normal;
+                                margin-top: .5em;
+                            }
+                            &:hover {
+                                background-color: $linkColor;
+                                &:after {
+                                    right: 3em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 辦理文件證明
+.documentary_proof_block {
+    display: block;
+    background-color: #aae4fb;
+    padding: 75px 0 80px;
+    background-image: url('../images/documentary_proof_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    .container {
+        @include gutter(200px);
+        position: relative;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .documentary_proof_group {
+        background-color: #f0f2f3;
+        padding: 2.5em 2em 0.5em;
+        box-sizing: border-box;
+        display: flex;
+        border-radius: 15px;
+        margin-bottom: 2em;
+        @include screen('tablet') {
+            flex-wrap: wrap;
+        }
+        .directions {
+            flex: 0 0 29%;
+            flex-basis: 29%;
+            margin-right: 1%;
+            @include screen('tablet') {
+                flex: 0 0 100%;
+                flex-basis: 100%;
+                margin-right: 0;
+            }
+            .title {
+                font-size: 1.25em;
+                color: darken($primaryColor, 10);
+                margin-bottom: 1em;
+                font-weight: bolder;
+            }
+            p {
+                line-height: 1.8em;
+            }
+        }
+        .documentary_block {
+            flex: 0 0 69%;
+            flex-basis: 69%;
+            margin-left: 1%;
+            display: flex;
+            flex-wrap: wrap;
+            @include screen('tablet') {
+                flex: 0 0 100%;
+                flex-basis: 100%;
+                margin-left: 0;
+            }
+            .documentary_list {
+                flex: 0 0 46%;
+                flex-basis: 46%;
+                margin: 0 2% 2em;
+                padding: 2em 1.5em;
+                background-color: #fff;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                border-radius: 15px;
+                display: flex;
+                position: relative;
+                @include screen('mobile') {
+                    flex-wrap: wrap;
+                    flex: 0 0 100%;
+                    flex-basis: 100%;
+                    margin: 0 0 1em;
+                }
+                @media(max-width: 420px) {
+                    flex-wrap: wrap;
+                }
+                &:before {
+                    content: '';
+                    width: 120px;
+                    height: 6px;
+                    background-color: #69b7f2;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    margin-left: -60px;
+                }
+                .pic {
+                    flex: 0 0 auto;
+                    flex-basis: 60px;
+                    margin-right: 2em;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    @media(max-width: 420px) {
+                        flex-basis: 100%;
+                        margin-right: 0;
+                        margin-bottom: 1em;
+                        text-align: center;
+                    }
+                }
+                ul {
+                    flex: 0 0 auto;
+                    flex-basis: calc(100% - 60px - 2em);
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    @media(max-width: 420px) {
+                        flex-basis: 100%;
+                        margin: 0 1.5em 0 1em;
+                    }
+                    li {
+                        margin-bottom: .5em;
+                        a {
+                            padding: .2em 0 .2em 0em;
+                            position: relative;
+                            color: $color-word;
+                            font-size: 1.125em;
+                            font-weight: bold;
+                            &:before {
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                border: 2px solid $color-word;
+                                transform: rotate(45deg);
+                                border-bottom: none;
+                                border-left: none;
+                                position: absolute;
+                                left: -1em;
+                                top: .7em;
+                            }
+                            &:hover {
+                                color: $aHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 大眾共用區
+.public_use_block {
+    display: block;
+    background-color: #fff;
+    padding: 70px 0 80px;
+    background-image: url('../images/public_use_block_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    .container {
+        @include gutter(200px);
+        position: relative;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .public_use_group {
+        // 影音專區
+        .video_block {
+            margin-bottom: 5em;
+            .video_group {
+                padding: 30px 50px 10px;
+                box-sizing: border-box;
+                background: rgb(170, 228, 251);
+                background: linear-gradient(90deg, rgba(170, 228, 251, 1) 37%, rgba(192, 230, 146, 1) 100%);
+                border-radius: 15px;
+                @include screen('mobile') {
+                    padding: 30px 30px 10px;
+                }
+            }
+        }
+    }
+    .public_use_group2 {
+        .infographics_block {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(9);
+            @include make-lg-column(9);
+        }
+        .key_link_block {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(3);
+            @include make-lg-column(3);
+        }
+        // 資訊圖像化
+        .infographics_block {
+            @include screen('tablet') {
+                margin-bottom: 3em;
+            }
+            .infographics_Slider {
+                width: 90%;
+                margin: 0;
+                @include gutter(0);
+                @include screen('tablet') {
+                    width: 100%;
+                }
+                .infographics_group {
+                    a {
+                        .images {
+                            display: block;
+                            padding: 0;
+                            position: relative;
+                            margin-bottom: 20px;
+                            @include aspect-ratio(5,
+                            2.6); //PC版比例
+                            @include screen('mobile') {
+                                @include aspect-ratio(5,
+                                3); //Mobile版比例
+                            }
+                        }
+                        // .caption {
+                        //     position: relative;
+                        //     color: $color-word;
+                        //     text-align: center;
+                        //     font-size: 1.125em;
+                        // }
+                        &:focus {
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                z-index: 2;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                        &:focus-visible {
+                            &:before {
+                                box-shadow: 0 0px 0px 2px $aFocus inset;
+                            }
+                        }
+                    }
+                }
+                /* ---點的位置、大小、顏色---*/
+                .slick-dots {
+                    bottom: -40px;
+                }
+                // 箭頭
+                .slick-prev {
+                    left: -40px;
+                    background-size: 80px 80px;
+                    background-color: transparent;
+                    @include screen('mobile') {
+                        top: 35%;
+                        left: 0;
+                    }
+                }
+                .slick-next {
+                    right: -40px;
+                    background-size: 80px 80px;
+                    background-color: transparent;
+                    @include screen('mobile') {
+                        top: 35%;
+                        right: 0;
+                    }
+                }
+            }
+            .more a {
+                min-width: 180px;
+            }
+        }
+        // 重點連結
+        .key_link_block {
+            .key_link_group {
+                border-radius: 15px;
+                background: rgb(189, 231, 146);
+                background: linear-gradient(180deg, rgba(189, 231, 146, 1) 0%, rgba(152, 214, 135, 1) 100%);
+                padding: 2em 1.5em;
+                margin-bottom: 2em;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        line-height: 1.4em;
+                        border-bottom: none;
+                        margin-bottom: 1em;
+                        @media(max-width: 1200px) {
+                            margin-bottom: 0em;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a {
+                            padding: .5em 0 .5em 1em;
+                            position: relative;
+                            color: $color-word;
+                            display: block;
+                            &:before {
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                display: inline-block;
+                                margin-left: 0;
+                                border: 2px solid $color-word;
+                                transform: rotate(45deg);
+                                border-bottom: none;
+                                border-left: none;
+                                position: absolute;
+                                left: 0em;
+                                top: 1em;
+                            }
+                            &:hover {
+                                color: $aHover;
+                            }
+                        }
+                    }
+                }
+            }
+            .more a {
+                min-width: 180px;
+            }
+        }
+    }
+}
+// ad_block
+.ad_block {
+    display: block;
+    background-color: #fff;
+    padding: 0px 0 80px;
+    // background-image:url('../images/documentary_proof_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    .container {
+        @include gutter(200px);
+        position: relative;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    .adSlider {
+        width: 90%;
+        margin: 0 auto;
+        .img-container {
+            width: 240px;
+            height: 80px;
+            margin: 0px 15px;
+            background-color: #fff;
+            a {
+                display: block;
+                text-align: center;
+                img {
+                    margin: 0 auto;
+                    border: 1px solid #ddd;
+                }
+            }
+            &:focus {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: 9;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-shadow: 0 0px 0px 3px $primaryColor inset;
+                }
+            }
+        }
+        /* ---點的位置、大小、顏色---*/
+        .slick-dots {
+            bottom: -40px;
+        }
+        // 箭頭
+        .slick-prev {
+            width: 40px !important;
+            height: 40px !important;
+            left: -40px;
+            background-size: 40px 40px;
+            background-color: transparent;
+            top: 30%;
+        }
+        .slick-next {
+            width: 40px !important;
+            height: 40px !important;
+            right: -40px;
+            background-size: 40px 40px;
+            background-color: transparent;
+            top: 30%;
+        }
+    }
+}

@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    &.noscroll {
+        position: static !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden !important;
+        overflow-y: hidden !important;
+        margin: 0;
+        padding: 0;
+    }
+}
+// 最外圍預設為100%
+.wrapper {
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    @include screen('mobile') {
+        background: #FFF;
+        overflow-y: auto;
+    }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 30px;
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    h2.title {
+        margin: 0 0 40px;
+        padding-top: 25px;
+        text-align: center;
+        display: block;
+        position: relative;
+        &:before {
+            content: '';
+            width: 120px;
+            height: 4px;
+            background: rgb(8, 127, 201);
+            background: linear-gradient(90deg, rgba(8, 127, 201, 1) 0%, rgba(208, 229, 158, 1) 100%);
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            margin-left: -60px;
+        }
+        span {
+            color: $color-word;
+            letter-spacing: 0.05em;
+            line-height: 1.25em;
+            font-size: 1.25em;
+        }
+    }
+}
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    padding-bottom:80px;
+    >.container {
+        @include gutter(200px); //gutter 代表左右要留白
+        display: flex;
+        @include screen('mobile') {
+            @include gutter(100px);
+        }
+        @include screen('xs_mobile') {
+            @include gutter(60px);
+        }
+    }
+    h2.title {
+        margin: 0 0 20px;
+        padding-bottom: 15px;
+        text-align: left;
+        display: block;
+        position: relative;
+        &:before {
+            content: '';
+            width: 120px;
+            height: 4px;
+            background: rgb(8, 127, 201);
+            background: linear-gradient(90deg, rgba(8, 127, 201, 1) 0%, rgba(208, 229, 158, 1) 100%);
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            top:auto;
+            margin-left: 0;
+        }
+        span {
+            color: $color-word;
+            letter-spacing: 0.05em;
+            line-height: 1.25em;
+            font-size: 1.25em;
+        }
+    }
+    .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .left_block {
+        flex: none;
+        flex-basis: 260px;
+        max-width: 260px;
+        margin-right: 40px;
+        &.hidden {
+            +.center_block {
+                flex: none;
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+        +.center_block {
+            flex: auto;
+            flex-basis: calc(100% - 300px);
+            max-width: calc(100% - 300px);
+        }
+        @include screen('tablet') {
+            display: none;
+            +.center_block {
+                flex: none;
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    &.small_size {
+        font-size: .938em;
+    }
+    &.large_size {
+        font-size: 1.125em;
+    }
+}
+.hidden {
+    display: none;
+}

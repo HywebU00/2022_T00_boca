@@ -1,0 +1,250 @@
+// lp備註
+.remark_block {
+    display: block;
+    background-color: #fdfaec;
+    color: $color-word;
+    border-radius: 5px;
+    padding: 20px 60px 20px 230px;
+    background-image: url('../images/remark_block_icon01.png');
+    background-repeat: no-repeat;
+    background-position: 1em 1em;
+    margin: 10px 0 30px;
+    line-height: 1.8em;
+    font-weight: bolder;
+    box-sizing: border-box;
+    position: relative;
+    @include screen('xs_mobile') {
+        padding: 10px 20px;
+        background-image: none;
+        &:before {
+            content: '';
+            background-image: url('../images/remark_block_icon01.png');
+            background-repeat: no-repeat;
+            position:absolute;
+            top:-50px;
+            left:0;
+            width:180px;
+        }
+    }
+}
+.remark_block2 {
+    display: block;
+    background-color: #fdfaec;
+    color: $color-word;
+    border-radius: 5px;
+    padding: 20px 60px 20px 230px;
+    background-image: url('../images/remark_block_icon02.png');
+    background-repeat: no-repeat;
+    background-position: 1em 1em;
+    margin: 10px 0 30px;
+    line-height: 1.8em;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+// 條件查詢
+.conditional_query_block {
+    margin-bottom: 2em;
+    margin-top: -3.5em;
+    .query_btn {
+        display: inline-block;
+        a {
+            display: block;
+            padding: .5em 2em;
+            color: #fff;
+            background: rgb(58, 133, 50);
+            background: linear-gradient(90deg, rgba(58, 133, 50, 1) 0%, rgba(31, 129, 134, 1) 100%);
+            font-size: 1.125em;
+            border-radius: 5px;
+        }
+    }
+    .flex-form {
+        background-color: #eee;
+        padding: 2em;
+        border-radius: 5px;
+        display: none;
+    }
+}
+// 各項表格下載
+.file_download_list {
+    width: 100%;
+    margin: 0 auto 2em;
+    border-top: 2px solid #ccc;
+    @include clearfix();
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 1em 1em 1em 2em;
+        border-bottom: solid 1px #eee;
+        font-size: 1.125em;
+        .num {
+            width: 1.5em;
+            text-align: right;
+            position: absolute;
+            top: 1.5em;
+            left: 0;
+            &:after {
+                content: ".";
+                display: inline-block;
+            }
+        }
+        .file_name {
+            line-height: 1.8em;
+            margin: .2em .5em .2em 0;
+            color: #222;
+            ~span {
+                flex: 0 0 auto;
+                margin: .2em;
+                font-size: .875em;
+                line-height: 1.5em;
+                vertical-align: middle;
+                color: #666;
+                a {
+                    color: #fff;
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+            }
+        }
+        $fileType: doc,
+        docx,
+        odt,
+        xls,
+        xlsx,
+        csv,
+        ods,
+        ppt,
+        pptx,
+        odp,
+        zip,
+        txt,
+        mov,
+        mp3,
+        jpg,
+        wmv,
+        mp4,
+        pdf,
+        other;
+        @each $fileType in $fileType {
+            span.file_#{$fileType} {
+                a {
+                    color: #fff;
+                    font-weight: bold;
+                    padding: .2em .8em;
+                    border-radius: 3px;
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        span {
+            &.file_doc,
+            &.file_docx,
+            &.file_odt {
+                a {
+                    background: #275cb7;
+                    &:hover,
+                    &:focus {
+                        background: darken(#275cb7, 5%);
+                    }
+                }
+            }
+            &.file_xls,
+            &.file_xlsx,
+            &.file_csv,
+            &.file_ods {
+                a {
+                    background: #387947;
+                    &:hover,
+                    &:focus {
+                        background: darken(#387947, 5%);
+                    }
+                }
+            }
+            &.file_ppt,
+            &.file_pptx,
+            &.file_odp,
+            &.file_pdf {
+                a {
+                    background: #c55a3b;
+                    &:hover,
+                    &:focus {
+                        background: darken(#c55a3b, 5%);
+                    }
+                }
+            }
+            &.file_pdf {
+                a {
+                    background: #c00;
+                    &:hover,
+                    &:focus {
+                        background: darken(#c00, 5%);
+                    }
+                }
+            }
+            &.file_zip {
+                a {
+                    background: #eb712e;
+                    &:hover,
+                    &:focus {
+                        background: darken(#eb712e, 5%);
+                    }
+                }
+            }
+            &.file_txt,
+            &.file_other {
+                a {
+                    background: #555;
+                    &:hover,
+                    &:focus {
+                        background: darken(#555, 5%);
+                    }
+                }
+            }
+            &.file_mov {
+                a {
+                    background: #009999;
+                    &:hover,
+                    &:focus {
+                        background: darken(#009999, 5%);
+                    }
+                }
+            }
+            &.file_mp3,
+            &.file_mp4 {
+                a {
+                    background: #088ecc;
+                    &:hover,
+                    &:focus {
+                        background: darken(#088ecc, 5%);
+                    }
+                }
+            }
+            &.file_jpg {
+                a {
+                    background: #6c29a4;
+                    &:hover,
+                    &:focus {
+                        background: darken(#6c29a4, 5%);
+                    }
+                }
+            }
+            &.file_wmv {
+                a {
+                    background: #430a1f;
+                    &:hover,
+                    &:focus {
+                        background: darken(#430a1f, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
