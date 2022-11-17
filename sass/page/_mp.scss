@@ -519,6 +519,7 @@ a.more {
     background-image: url('../images/news_block_bg.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
+    position: relative;
     .container {
         @include gutter(200px);
         @include screen('mobile') {
@@ -539,6 +540,54 @@ a.more {
         @include screen('mobile') {
             padding: 30px 30px 30px;
         }
+    }
+    .pigeon_01 {
+        position: absolute;
+        right: 20px;
+        top: -30px;
+        width: 280px;
+        height: 155px;
+        transform: rotate(-10deg);
+        animation-name: pigeon01;
+        animation-delay: 0;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        z-index: 0;
+    }
+    @keyframes pigeon01 {
+        0% {
+            transform: rotate(-10deg);
+            right: 20px;
+            top: -30px;
+            opacity: 0;
+            width: 280px;
+            height: 155px;
+        }
+        10% {
+            transform: rotate(-10deg);
+            right: 20px;
+            top: -30px;
+            opacity: 1;
+            width: 280px;
+            height: 155px;
+        }
+        20% {
+            transform: rotate(-10deg);
+            top: -30px;
+            opacity: 1;
+            width: 280px;
+            height: 155px;
+        }
+         100% {
+            transform: rotate(0deg);
+            right: 120%;
+            top: -70px;
+            opacity: 1;
+            width: 200px;
+            height: 111px;
+        }
+        
     }
 }
 // 旅遊區塊
@@ -571,9 +620,15 @@ a.more {
         .travel_alert_block {
             flex: 1 1 auto;
             flex-basis: 60%;
+            position:relative;
             @include screen('tablet') {
                 flex-basis: 100%;
                 margin-bottom: 3em;
+            }
+            .pigeon_02{
+                position:absolute;
+                top:-40px;
+                left:30px;
             }
             .alert_block {
                 background-color: #fff;
@@ -692,8 +747,14 @@ a.more {
         .travel_safety_block {
             flex: 1 1 auto;
             flex-basis: 40%;
+            position:relative;
             @include screen('tablet') {
                 flex-basis: 100%;
+            }
+            .pigeon_03{
+                position:absolute;
+                top:-50px;
+                right:0px;
             }
             .safety_list {
                 margin: 0 0 0 15%;
@@ -855,7 +916,6 @@ a.more {
                         color: $color-word;
                         border-radius: 5px;
                         font-weight: bolder;
-                       
                         &:hover {
                             color: $color-green;
                         }
@@ -907,7 +967,6 @@ a.more {
                         color: $color-word;
                         border-radius: 5px;
                         font-weight: bolder;
-                        
                         &:hover {
                             color: $aHover;
                         }
@@ -1059,7 +1118,7 @@ a.more {
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
-                     font-size: 1.188em;
+                    font-size: 1.188em;
                     @media(max-width: 420px) {
                         flex-basis: 100%;
                         margin: 0 1.5em 0 1em;
@@ -1070,7 +1129,6 @@ a.more {
                             padding: .2em 0 .2em 0em;
                             position: relative;
                             color: $color-word;
-                           
                             font-weight: bold;
                             &:before {
                                 content: '';
@@ -1235,13 +1293,12 @@ a.more {
                     list-style-type: none;
                     font-size: 1.188em;
                     li {
-                        
                         border-bottom: none;
                         margin-bottom: 0.7em;
                         @media(max-width: 1200px) {
                             margin-bottom: 0em;
                         }
-                        @include screen('tablet'){
+                        @include screen('tablet') {
                             margin-bottom: 0.3em;
                         }
                         &:last-child {
