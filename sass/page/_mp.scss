@@ -447,7 +447,7 @@ a.more {
                     position: relative;
                     color: $color-word;
                     text-align: center;
-                    font-size: 1.125em;
+                    font-size: 1.25em;
                 }
                 &:focus {
                     &:before {
@@ -586,6 +586,7 @@ a.more {
                     margin: 0 0 15px;
                     padding: 0;
                     list-style-type: none;
+                    font-size: 1.125em;
                     li {
                         flex: 0 0 auto;
                         flex-basis: 50%;
@@ -606,7 +607,7 @@ a.more {
                             width: 24px;
                             height: 24px;
                             display: inline-block;
-                            margin-right: 15px;
+                            margin-right: 10px;
                             background-color: #959595;
                             border-radius: 2px;
                             font-size: 0;
@@ -627,6 +628,7 @@ a.more {
                 }
                 .remark {
                     color: $color-word;
+                    font-size: 1.125em;
                     a {
                         display: block;
                         font-weight: bolder;
@@ -649,6 +651,7 @@ a.more {
                     margin: 20px 20px 40px;
                     padding: 0;
                     list-style-type: none;
+                    font-size: 1.125em;
                     li {
                         a {
                             padding: .6em 0;
@@ -711,7 +714,7 @@ a.more {
                             color: $color-word;
                             display: block;
                             font-weight: bolder;
-                            font-size: 1.188em;
+                            font-size: 1.25em;
                             min-height: 75px;
                             display: flex;
                             align-items: center;
@@ -836,12 +839,13 @@ a.more {
                 color: $color-word;
                 line-height: 1.6em;
                 margin: 0 0 .8em;
-                font-size: 1.125em;
+                font-size: 1.188em;
             }
             ul {
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
+                font-size: 1.188em;
                 li {
                     margin-bottom: 5px;
                     a {
@@ -851,7 +855,7 @@ a.more {
                         color: $color-word;
                         border-radius: 5px;
                         font-weight: bolder;
-                        font-size: 1.125em;
+                       
                         &:hover {
                             color: $color-green;
                         }
@@ -892,6 +896,7 @@ a.more {
                 margin: 0;
                 padding: 0;
                 list-style-type: none;
+                font-size: 1.188em;
                 li {
                     margin-bottom: 5px;
                     position: relative;
@@ -902,7 +907,7 @@ a.more {
                         color: $color-word;
                         border-radius: 5px;
                         font-weight: bolder;
-                        font-size: 1.125em;
+                        
                         &:hover {
                             color: $aHover;
                         }
@@ -927,7 +932,7 @@ a.more {
                                 transition: .5s;
                             }
                             span {
-                                font-size: 0.875em;
+                                font-size: 0.938em;
                                 display: block;
                                 font-weight: normal;
                                 margin-top: .5em;
@@ -983,13 +988,14 @@ a.more {
                 margin-right: 0;
             }
             .title {
-                font-size: 1.25em;
+                font-size: 1.313em;
                 color: darken($primaryColor, 10);
                 margin-bottom: 1em;
                 font-weight: bolder;
             }
             p {
                 line-height: 1.8em;
+                font-size: 1.125em;
             }
         }
         .documentary_block {
@@ -1053,6 +1059,7 @@ a.more {
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
+                     font-size: 1.188em;
                     @media(max-width: 420px) {
                         flex-basis: 100%;
                         margin: 0 1.5em 0 1em;
@@ -1063,7 +1070,7 @@ a.more {
                             padding: .2em 0 .2em 0em;
                             position: relative;
                             color: $color-word;
-                            font-size: 1.125em;
+                           
                             font-weight: bold;
                             &:before {
                                 content: '';
@@ -1125,14 +1132,14 @@ a.more {
         .infographics_block {
             @include make-xs-column(12);
             @include make-sm-column(12);
-            @include make-md-column(9);
-            @include make-lg-column(9);
+            @include make-md-column(8);
+            @include make-lg-column(8);
         }
         .key_link_block {
             @include make-xs-column(12);
             @include make-sm-column(12);
-            @include make-md-column(3);
-            @include make-lg-column(3);
+            @include make-md-column(4);
+            @include make-lg-column(4);
         }
         // 資訊圖像化
         .infographics_block {
@@ -1226,21 +1233,27 @@ a.more {
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
+                    font-size: 1.188em;
                     li {
-                        line-height: 1.4em;
+                        
                         border-bottom: none;
-                        margin-bottom: 1em;
+                        margin-bottom: 0.7em;
                         @media(max-width: 1200px) {
                             margin-bottom: 0em;
+                        }
+                        @include screen('tablet'){
+                            margin-bottom: 0.3em;
                         }
                         &:last-child {
                             margin-bottom: 0;
                         }
                         a {
-                            padding: .5em 0 .5em 1em;
+                            padding: .4em 0 .4em 1em;
                             position: relative;
                             color: $color-word;
                             display: block;
+                            transition: .5s;
+                            line-height: 1.4em;
                             &:before {
                                 content: '';
                                 width: 5px;
@@ -1252,8 +1265,8 @@ a.more {
                                 border-bottom: none;
                                 border-left: none;
                                 position: absolute;
-                                left: 0em;
-                                top: 1em;
+                                left: 0;
+                                top: 0.8em;
                             }
                             &:hover {
                                 color: $aHover;

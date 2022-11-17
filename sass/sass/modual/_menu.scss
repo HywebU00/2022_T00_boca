@@ -55,7 +55,7 @@
         // 第一層選單樣式
         >li {
             flex: 0 1 auto;
-            margin: 0 0.5%;
+            margin: 0 0.2%;
             >a {
                 display: block;
                 padding: 0 1em;
@@ -64,7 +64,7 @@
                 line-height: 4em;
                 white-space: nowrap;
                 color: $color-word;
-                font-size: 1.25em;
+                font-size: 1.313em;
             }
             &.hasChild {
                 >a {

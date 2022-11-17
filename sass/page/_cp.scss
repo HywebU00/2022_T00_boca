@@ -115,10 +115,10 @@
             line-height: 1.8em;
             margin: .2em .5em .2em 0;
             color: #222;
-            ~span {
+            ~div {
                 flex: 0 0 auto;
                 margin: .2em;
-                font-size: .875em;
+                font-size: 1em;
                 line-height: 1.5em;
                 vertical-align: middle;
                 color: #666;
@@ -126,6 +126,9 @@
                     color: #fff;
                     display: inline-block;
                     margin-right: 8px;
+                }
+                span{
+                    padding:0 .8em;
                 }
             }
         }
@@ -149,7 +152,7 @@
         pdf,
         other;
         @each $fileType in $fileType {
-            span.file_#{$fileType} {
+            div.file_#{$fileType} {
                 a {
                     color: #fff;
                     font-weight: bold;
@@ -162,7 +165,7 @@
                 }
             }
         }
-        span {
+        div {
             &.file_doc,
             &.file_docx,
             &.file_odt {

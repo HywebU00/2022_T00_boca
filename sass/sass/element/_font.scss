@@ -78,6 +78,7 @@ kbd {
         margin: 0;
         position: relative;
         border: none;
+        font-size: 1.125em;
         // background-color: #eee;
         border-radius: 0;
         &:before {
@@ -110,11 +111,12 @@ kbd {
         background-color: #fff;
         display: none;
         li {
-            font-size: 1em;
+           
             margin: 2px;
             button {
                 border: none;
                 margin: 0;
+                 font-size: 1.125em;
                 &:hover {
                     background-color: #eee;
                 }
