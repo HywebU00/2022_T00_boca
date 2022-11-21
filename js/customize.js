@@ -9,14 +9,26 @@ $(function() {
     // 字型大小
     $('.font_size ul').hide();
     $('.font_size .fontselect').click(function() {
-        $('.font_size ul').slideToggle();
+        $('.font_size ul').slideDown();
         $('.search_btnblock .search').slideUp();
+    })
+    $('.font_size .fontselect').focus(function() {
+        $('.font_size ul').slideDown();
+    })
+    $('.font_size ul li:last-child button').focusout(function() {
+        $('.font_size ul').slideUp();
     })
     // Search
     $('.search_btnblock .search').hide();
     $('.search_btnblock .search_btn').click(function() {
-        $('.search_btnblock .search').slideToggle().addClass('addflex');
+        $('.search_btnblock .search').slideDown().addClass('addflex');
         $('.font_size ul').slideUp();
+    })
+    $('.search_btnblock .search_btn').focus(function(){
+         $('.search_btnblock .search').slideDown();
+    })
+     $('.search_btnblock .search .keywordideas ul li:last-child>a').focusout(function(){
+         $('.search_btnblock .search').slideUp();
     })
     //sticky sidebar
     if ($('.stickySidebar').length > 0) {
@@ -122,7 +134,7 @@ $(function() {
         $('.fixed_share_group_right .sidebar_group').slideToggle();
     })
     // lp條件查詢
-    $('.conditional_query_block .query_btn').click(function(){
+    $('.conditional_query_block .query_btn').click(function() {
         $('.conditional_query_block .flex-form').slideToggle();
     })
     //燈箱slick+lightBox組合

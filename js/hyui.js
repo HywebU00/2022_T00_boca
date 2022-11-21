@@ -666,22 +666,24 @@ $(function() {
     /////////////字型大小 font-size//////////
     /*------------------------------------*/
     $('.font_size').find('.small').click(function(e) {
-        $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size').addClass('small_size');
+        $(this).parent('li').siblings('li').find('button').removeClass('active');
+        $(this).parents('ul').siblings('button').removeClass('active');
+        $('.main').removeClass('large_size').addClass('small_size');
         $(this).blur().addClass('active');
         e.preventDefault();
         createCookie('FontSize', 'small', 356);
     });
     $('.font_size').find('.medium').click(function(e) {
-        $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('large_size small_size');
+        $(this).siblings('ul').find('button').removeClass('active');
+        $('.main').removeClass('large_size small_size');
         $(this).blur().addClass('active');
         e.preventDefault();
         createCookie('FontSize', 'medium', 356);
     });
     $('.font_size').find('.large').click(function(e) {
-        $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.innerpage').removeClass('small_size').addClass('large_size');
+        $(this).parent('li').siblings('li').find('button').removeClass('active');
+        $(this).parents('ul').siblings('button').removeClass('active');
+        $('.main').removeClass('small_size').addClass('large_size');
         $(this).blur().addClass('active');
         e.preventDefault();
         createCookie('FontSize', 'large', 356);
@@ -711,22 +713,24 @@ $(function() {
         //alert('cookie='+cookie);
         if (cookie == 'small') {
             //$('.font_size').find('.small').click();
-            $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+            $('.font_size').find('.small').parent('li').siblings('li').find('button').removeClass('active');
+            $('.font_size').find('.small').parents('ul').siblings('button').removeClass('active');
+            $('.main').removeClass('large_size medium_size').addClass('small_size');
             $('.font_size').find('.small').addClass('active');
             e.preventDefault();
         } else {
             if (cookie == 'large') {
                 //$('.font_size').find('.large').click();
-                $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
-                $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+                $('.font_size').find('.large').parent('li').siblings('li').find('button').removeClass('active');
+                $('.font_size').find('.large').parents('ul').siblings('button').removeClass('active');
+                $('.main').removeClass('small_size medium_size').addClass('large_size');
                 $('.font_size').find('.large').addClass('active');
                 e.preventDefault();
             } else {
                 //這裡是預設宣告
                 //$('.font_size').find('.medium').click();
-                $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
-                $('.innerpage').removeClass('large_size small_size');
+                $('.font_size').find('.medium').siblings('ul').find('button').removeClass('active');
+                $('.main').removeClass('large_size small_size');
                 $('.font_size').find('.medium').addClass('active');
                 e.preventDefault();
             }

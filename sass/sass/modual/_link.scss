@@ -32,7 +32,8 @@
             position: relative;
             height: 100%;
             box-sizing: border-box;
-            font-size: 1.125em;
+            font-size: 1.25em;
+            line-height: 1.6em;
             @include aSetting_nocolor;
             &:before {
                 content: '';
@@ -60,8 +61,7 @@
                     content: ".";
                 }
             }
-            &:hover,
-            &:focus {
+            &:hover {
                 border: 2px solid $primaryColor;
                 color: $primaryColor;
                  &:before{

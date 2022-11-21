@@ -1,6 +1,6 @@
 // for CP page content setting only
 .cp {
-    font-size: 1em * 1.0666666;
+    font-size: 1em * 1.125;
     line-height: 1.65em;
     @include screen('xs_mobile') {
         font-size: 1em * 1.2;
