@@ -196,9 +196,10 @@
                         padding: 0 3.3em 0 1em;
                     }
                     @include screen('xs_mobile') {
+                        padding: .6em 0;
                         .date {
                             display: block;
-                            padding: 0 0 1em 0;
+                            padding: 0 0 .5em 0;
                         }
                         white-space: normal;
                     }

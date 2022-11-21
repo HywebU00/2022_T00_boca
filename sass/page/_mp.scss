@@ -529,6 +529,16 @@ a.more {
             @include gutter(60px);
         }
     }
+    @include screen('mobile') {
+        h2.title {
+            margin-bottom: 50px
+        }
+    }
+    @include screen('xs_mobile') {
+        h2.title {
+            margin-bottom: 70px
+        }
+    }
     .tabSet {
         background-color: #fff;
         border-radius: 15px;
@@ -554,6 +564,17 @@ a.more {
         animation-iteration-count: infinite;
         animation-direction: normal;
         z-index: 0;
+        @include screen('mobile') {
+            animation-name: pigeon02;
+            top: 0px;
+            width: 240px;
+            height: 133px;
+        }
+        @include screen('xs_mobile') {
+            top: 45px;
+            width: 200px;
+            height: 111px;
+        }
     }
     @keyframes pigeon01 {
         0% {
@@ -579,7 +600,7 @@ a.more {
             width: 280px;
             height: 155px;
         }
-         100% {
+        100% {
             transform: rotate(0deg);
             right: 120%;
             top: -70px;
@@ -587,7 +608,6 @@ a.more {
             width: 200px;
             height: 111px;
         }
-        
     }
 }
 // 旅遊區塊
@@ -597,6 +617,9 @@ a.more {
     background-image: url('../images/travel_block_bg.jpg');
     background-repeat: no-repeat;
     background-position: left top;
+    @include screen('tablet') {
+        padding: 75px 0 100px
+    }
     .container {
         @include gutter(200px);
         @include screen('mobile') {
@@ -620,15 +643,28 @@ a.more {
         .travel_alert_block {
             flex: 1 1 auto;
             flex-basis: 60%;
-            position:relative;
+            position: relative;
             @include screen('tablet') {
                 flex-basis: 100%;
                 margin-bottom: 3em;
             }
-            .pigeon_02{
-                position:absolute;
-                top:-40px;
-                left:30px;
+            .pigeon_02 {
+                position: absolute;
+                top: -40px;
+                left: 30px;
+                width: 178px;
+                height: 150px;
+                @media(max-width: 1200px) {
+                    left: 0px;
+                }
+                @include screen('mobile') {
+                    width: 150px;
+                    height: 126px;
+                    top: -14px;
+                }
+                @media(max-width: 480px) {
+                    display: none;
+                }
             }
             .alert_block {
                 background-color: #fff;
@@ -747,14 +783,36 @@ a.more {
         .travel_safety_block {
             flex: 1 1 auto;
             flex-basis: 40%;
-            position:relative;
+            position: relative;
             @include screen('tablet') {
                 flex-basis: 100%;
             }
-            .pigeon_03{
-                position:absolute;
-                top:-50px;
-                right:0px;
+            .pigeon_03 {
+                position: absolute;
+                top: -50px;
+                right: 0px;
+                width: 200px;
+                height: 160px;
+                @media(max-width: 1200px) {
+                    width: 180px;
+                    height: 144px;
+                    top: -40px;
+                    right: -30px;
+                }
+                @include screen('tablet') {
+                    width: 200px;
+                    height: 160px;
+                    top: -55px;
+                }
+                @include screen('xs_mobile') {
+                    width: 180px;
+                    height: 144px;
+                    top: -40px;
+                    right: -30px;
+                }
+                @media(max-width: 480px) {
+                    display: none;
+                }
             }
             .safety_list {
                 margin: 0 0 0 15%;
@@ -816,6 +874,7 @@ a.more {
         background-image: url('../images/passport_bg.png');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 100%;
         width: 608px;
         height: 483px;
         position: absolute;
@@ -825,6 +884,25 @@ a.more {
         transition: .5s;
         @media(max-width: 1200px) {
             right: -20%;
+        }
+        @include screen('tablet') {
+            width: 550px;
+            height: 437px;
+            top: -128px;
+        }
+        @include screen('mobile') {
+            width: 500px;
+            height: 437px;
+        }
+        @include screen('xs_mobile') {
+            width: 450px;
+            height: 357px;
+            top: -88px;
+        }
+        @media(max-width: 480px) {
+            width: 400px;
+            height: 318px;
+            top: -60px;
         }
     }
     .container {
@@ -891,6 +969,7 @@ a.more {
                 color: $color-word;
                 text-align: center;
                 margin-bottom: 15px;
+
                 img {
                     vertical-align: middle;
                     margin-right: 8px;
@@ -901,6 +980,7 @@ a.more {
                 line-height: 1.6em;
                 margin: 0 0 .8em;
                 font-size: 1.188em;
+                font-weight: bolder;
             }
             ul {
                 margin: 0;
@@ -915,7 +995,7 @@ a.more {
                         background-color: #fff;
                         color: $color-word;
                         border-radius: 5px;
-                        font-weight: bolder;
+                        
                         &:hover {
                             color: $color-green;
                         }
@@ -966,7 +1046,7 @@ a.more {
                         background-color: #fff;
                         color: $color-word;
                         border-radius: 5px;
-                        font-weight: bolder;
+                        
                         &:hover {
                             color: $aHover;
                         }
@@ -991,10 +1071,10 @@ a.more {
                                 transition: .5s;
                             }
                             span {
-                                font-size: 0.938em;
+                               
                                 display: block;
-                                font-weight: normal;
-                                margin-top: .5em;
+                                font-weight:bolder;
+                                margin-bottom: .5em;
                             }
                             &:hover {
                                 background-color: $linkColor;
@@ -1017,6 +1097,7 @@ a.more {
     background-image: url('../images/documentary_proof_bg.jpg');
     background-repeat: no-repeat;
     background-position: center top;
+    position: relative;
     .container {
         @include gutter(200px);
         position: relative;
@@ -1025,6 +1106,72 @@ a.more {
         }
         @include screen('xs_mobile') {
             @include gutter(60px);
+        }
+    }
+    .pigeon_04 {
+        position: absolute;
+        bottom: 70px;
+        left: 23%;
+        animation-name: pigeon04;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        width: 170px;
+        height: 139px;
+        @include screen('tablet') {
+            bottom: auto;
+            left: auto;
+            right: 5%;
+            top: 40px;
+        }
+        @media(max-width: 480px){
+             right: -3%;
+        }
+        @media(max-width: 380px){
+            display: none;
+        }
+    }
+    @keyframes pigeon04 {
+        0% {
+            transform: translateY(-20px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+    .pigeon_05 {
+        position: absolute;
+        bottom: 50px;
+        left: 8%;
+        animation-name: pigeon05;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        width: 140px;
+        height: 140px;
+        @include screen('tablet') {
+            
+            left: auto;
+            top: -20px;
+            bottom: auto;
+        }
+        @media(max-width: 480px){
+            left: -3%;
+        }
+        @media(max-width: 380px){
+            display: none;
+        }
+    }
+    @keyframes pigeon05 {
+        0% {
+            transform: translateY(-30px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-30px);
         }
     }
     .documentary_proof_group {
