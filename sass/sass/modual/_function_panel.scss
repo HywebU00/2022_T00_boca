@@ -191,6 +191,50 @@ div.function {
                          filter: invert(100%);
                     }
                 }
+                &.facebook, &.twitter, &.line {
+                    a {
+                        background-color: #fff;
+                        &:hover,
+                        &:focus {
+                            background: #fff;
+                            color: #fff;
+                            &:before {
+                                filter: none;
+                            }
+                        }
+                    }
+                }
+
+                &.facebook {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_facebook.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.twitter {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_twitter.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
+                &.line {
+                    a:before {
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        background: url(../images/basic/icon_line2.svg) no-repeat center center;
+                        background-size: 100%;
+                    }
+                }
             }
         }
     }

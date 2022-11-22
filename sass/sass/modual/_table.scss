@@ -19,19 +19,9 @@ table {
             font-weight: normal;
         }
     }
-    th, // td:not(.gsib_b,.gsc-search-button) {
-    //     padding: .5em;
-    //     text-align: left;
-    // }
-    // td:not(.gsib_a,.gsc-search-button){
-    //     border: #ddd 1px solid;
-    //     word-break: break-all;
-    //     a {
-    //         word-break: break-all;
-    //     }
-    // }
+    th, 
     td {
-        padding:1em .5em;
+        padding:.8em .5em;
         text-align: left;
     }
     td {
@@ -65,7 +55,7 @@ table {
 
 .table_list {
     margin-bottom: 2em;
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
         tbody,
@@ -88,15 +78,16 @@ table {
             border: none !important;
             border-bottom: 1px solid #eee !important;
             position: relative;
-            padding-left: 35% !important;
+            padding-left: 10px !important;
             white-space: normal;
             text-align: left;
             &:before {
                 content: attr(data-title);
-                position: absolute;
-                top: .5em;
-                left: .5em;
-                width: 30%;
+                position: relative;
+                // display: inline-block;
+                // top: .5em;
+                // left: .5em;
+                width: auto;
                 padding-right: 10px;
                 white-space: nowrap;
                 text-align: left;

@@ -73,9 +73,15 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-bottom:80px;
+    @include screen('tablet'){
+        padding-top:80px;
+    }
     >.container {
         @include gutter(200px); //gutter 代表左右要留白
         display: flex;
+        @include screen('tablet'){
+            @include gutter(150px);
+        }
         @include screen('mobile') {
             @include gutter(100px);
         }
