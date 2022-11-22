@@ -137,54 +137,7 @@ $(function() {
     $('.conditional_query_block .query_btn').click(function() {
         $('.conditional_query_block .flex-form').slideToggle();
     })
-    //燈箱slick+lightBox組合
-    $('.cp_slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 1500,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        focusOnSelect: true,
-        accessibility: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
-            }
-        }, {
-            breakpoint: 545,
-            settings: {
-                arrows: true,
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            }
-        }]
-    });
-    $('.cp_slider').slickLightbox({
-        caption: 'caption',
-        lazyLoad: 'ondemand',
-        useHistoryApi: 'true',
-        ease: 'ease',
-        lazy: true
-    });
-    // 
+    // cppic_slider
     $('.cppic_slider').slick({
         dots: true,
         infinite: false,
@@ -268,4 +221,45 @@ $(function() {
             e.preventDefault();
         });
     });
+
 });
+// 快捷列
+$(function() {
+    // 了解出國資訊
+    $('.abroad').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.travel_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.travel_block').find('a:first').focus(); 
+    });
+
+    // 申辦護照
+    $('.passport').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.apply_passport_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.apply_passport_block').find('button:first').focus(); 
+    });
+    // 國人旅外及外籍人士來臺資訊
+    $('.contact').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.people_exchanges_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.people_exchanges_block').find('a:first').focus(); 
+    });
+    // 辦理文件證明
+    $('.document').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.documentary_proof_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.documentary_proof_block').find('a:first').focus(); 
+    });
+    // 最新消息
+    $('.news').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.news_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.news_block').find('button:first').focus(); 
+    });
+    // 影音專區
+    $('.video').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.public_use_block').offset().top - 60 }, 0, 'easeOutExpo');
+        $('.public_use_block').find('button:first').focus(); 
+    });
+    // 資訊圖像化 
+    $('.picture').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('.public_use_group2').offset().top - 140 }, 0, 'easeOutExpo');
+        $('.public_use_group2').find('button:first').focus(); //可以這樣加
+    });
+    
+})
