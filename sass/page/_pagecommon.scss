@@ -10,21 +10,20 @@
     background-position: 1em 1em;
     margin: 10px 0 30px;
     font-size: 1.188em;
-    line-height: 1.8em;
-    font-weight: bolder;
+    line-height: 1.7em;
     box-sizing: border-box;
     position: relative;
-    @include screen('xs_mobile') {
+    @include screen('mobile') {
         padding: 10px 20px;
         background-image: none;
         &:before {
             content: '';
             background-image: url('../images/remark_block_icon01.png');
             background-repeat: no-repeat;
-            position:absolute;
-            top:-50px;
-            left:0;
-            width:180px;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 180px;
         }
     }
 }
@@ -39,9 +38,21 @@
     background-position: 1em 1em;
     margin: 10px 0 30px;
     font-size: 1.188em;
-    line-height: 1.8em;
-    font-weight: bolder;
+    line-height: 1.7em;
     box-sizing: border-box;
+    @include screen('mobile') {
+        padding: 10px 20px;
+        background-image: none;
+        &:before {
+            content: '';
+            background-image: url('../images/remark_block_icon02.png');
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 180px;
+        }
+    }
 }
 // 條件查詢
 .conditional_query_block {
@@ -248,5 +259,726 @@
                 }
             }
         }
+    }
+}
+// 說明條列
+.directions_list_block {
+    margin-bottom: 2.5em;
+    background-color: #F2F2F2;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.188em;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        
+        li {
+            margin-bottom: .5em;
+            position: relative;
+            padding: 0em 0 .3em 1.5em;
+            line-height: 1.6em;
+            @include screen('xs_mobile') {
+                border-bottom: 1px dotted #ddd;
+            }
+            &:before {
+                content: '·';
+                font-size: 2em;
+                font-weight: bold;
+                width: 1em;
+                height: 1em;
+                position: absolute;
+                top: 0.05em;
+                left: .1em;
+                color: #666;
+            }
+            ul{
+                list-style-type: none;
+                margin-top: 1em;
+                li{
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// 現場受理狀態 
+.accept_state_block {
+    h3 {
+        color: $primaryColor;
+        font-size: 1.562em;
+        margin: 0 0 .5em;
+        padding: 0 0 0.5em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    .accept_update_time {
+        font-size: 1.125em;
+        margin-bottom: 1em;
+        text-align: right;
+        color: $color-orange;
+    }
+    .accept_group {
+        display: flex;
+        margin-bottom: 1em;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1em;
+        @include screen('tablet') {
+            flex-wrap: wrap;
+        }
+        .accept_leftblock {
+            flex: 0 0 auto;
+            flex-basis: 30%;
+            @include screen('tablet') {
+                flex-basis: 100%;
+                margin-bottom: 1em;
+            }
+            .unit_title {
+                font-size: 1.5em;
+                color: #6DA21D;
+                margin-bottom: .5em;
+                font-weight: bolder;
+                line-height: 1.3em;
+            }
+            .object_name {
+                font-size: 1.125em;
+            }
+        }
+        .accept_rightblock {
+            flex: 0 0 auto;
+            flex-basis: 70%;
+            display: flex;
+            justify-content: space-between;
+            @include screen('tablet') {
+                flex-basis: 100%;
+            }
+            @include screen('xs_mobile') {
+                flex-wrap: wrap;
+            }
+            .accept_list {
+                flex: 0 0 auto;
+                flex-basis: 31%;
+                margin: 0;
+                padding: 1.5em 1em;
+                box-sizing: border-box;
+                background-color: #eee;
+                text-align: center;
+                border-radius: 5px;
+                @include screen('xs_mobile') {
+                    flex-basis: 48%;
+                    margin-bottom: 1em;
+                }
+                @media(max-width: 400px) {
+                    flex-basis: 100%;
+                }
+                .title {
+                    font-size: 1.438em;
+                    font-weight: bolder;
+                    margin-bottom: 1em;
+                    color: #444;
+                }
+                .number {
+                    font-size: 1.875em;
+                    font-weight: bolder;
+                    color: #333;
+                    &.colorstyle02 {
+                        color: darken($primaryColor, 10);
+                    }
+                    &.colorstyle03 {
+                        color: darken(#6DA21D, 5);
+                    }
+                }
+            }
+        }
+    }
+}
+// 翻譯資料
+.translate_block {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    .tabbutton {
+        button {
+            margin-bottom: 1em;
+            border-radius: 5px;
+            font-size: 1.125em;
+            &.active {
+                background: $primaryColor !important;
+                color: #fff !important;
+                border: solid 1px $primaryColor !important;
+                &:hover,
+                &:focus {
+                    background: darken($primaryColor, 10) !important;
+                    border: solid 1px $primaryColor !important;
+                }
+            }
+        }
+    }
+    .tabcontent {
+        background-color: #F2F2F2;
+        padding: 1.5em 1.5em;
+        box-sizing: border-box;
+        border-radius: 5px;
+        .useword {
+            color: #333;
+            margin-bottom: 1em;
+            line-height: 1.7em;
+            font-size: 1.125em;
+            span {
+                display: block;
+                margin-bottom: .5em;
+                font-weight: bolder;
+                color: $aColor;
+                // font-size: 1.188em;
+            }
+        }
+        .translate_frome {
+            padding: 0 1em .5em;
+            background-color: #fff;
+            border-radius: 5px;
+            .form_grp {
+                border-bottom: none;
+            }
+        }
+    }
+    .table_list {
+        margin-bottom: .5em;
+    }
+}
+// 局長信箱
+.secretary_mailbox {
+    display: flex;
+    margin: .5em 0;
+    background-color: #F2F2F2;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-sizing: border-box;
+    @include screen('tablet') {
+        flex-wrap: wrap;
+    }
+    .mailbox_pic {
+        flex: 0 0 auto;
+        flex-basis: 45%;
+        max-width: 45%;
+        margin-right: 1em;
+        @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+        .pic_box {
+            position: relative;
+            .want_say {
+                position: absolute;
+                left: 1em;
+                top: 1em;
+                font-size: 1.75em;
+                color: #fff;
+                font-weight: bolder;
+            }
+            button {
+                position: absolute;
+                right: 1em;
+                bottom: 1em;
+            }
+        }
+    }
+    .mailbox_introduction {
+        flex: 0 0 auto;
+        flex-basis: calc(100% - 45% - 1em);
+        max-width: calc(100% - 45% - 1em);
+        padding-top: .5em;
+        @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 1.188em;
+            li {
+                margin-bottom: .5em;
+                position: relative;
+                padding: 0em 0 .3em 1.5em;
+                line-height: 1.6em;
+                word-break: break-all;
+                @include screen('xs_mobile') {
+                    border-bottom: 1px dotted #ddd;
+                }
+                &:before {
+                    content: '·';
+                    font-size: 2em;
+                    font-weight: bold;
+                    width: 1em;
+                    height: 1em;
+                    position: absolute;
+                    top: 0.05em;
+                    left: .1em;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+// 步驟
+.online_stepblock {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 70px 0 30px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 900px) {
+        padding: 50px 20px 30px 70px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        @media (max-width: 900px) {
+            display: block;
+        }
+        li {
+            flex: auto;
+            flex-basis: 21%;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            min-height: 80px;
+            @media (max-width: 900px) {
+                flex-basis: 100%;
+            }
+            div {
+                border-radius: 5px;
+                line-height: 1.2em;
+                background-color: #767575;
+                color: #fff;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25em;
+                span {
+                    font-size: 1.125em;
+                    margin: 0 0 .5em;
+                    padding: 0;
+                    flex: auto;
+                    flex-basis: 100%;
+                    font-weight: bolder;
+                    em {
+                        padding: 0 5px;
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 6px solid #bbb;
+                position: absolute;
+                left: 50%;
+                top: -46px;
+                z-index: 3;
+                margin-left: -20px;
+                @media (max-width: 900px) {
+                    margin-left: -50px;
+                    left: 0;
+                    top: auto;
+                }
+            }
+            &:after {
+                content: "";
+                width: 100%;
+                height: 6px;
+                background-color: #bbb;
+                position: absolute;
+                left: auto;
+                right: 0;
+                top: -32px;
+                bottom: 0;
+                z-index: 2;
+                @media (max-width: 900px) {
+                    width: 6px;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    left: -36px;
+                    right: auto;
+                }
+            }
+            &.active {
+                div {
+                    background-color: $primaryColor;
+                }
+                &:before {
+                    border: 6px solid $primaryColor;
+                    background-color: $primaryColor;
+                    background-image: url("../images/icon-tick.png");
+                    background-position: 0;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                }
+                &:after {
+                    background: $primaryColor;
+                    background: linear-gradient(90deg,
+                        $primaryColor 0%,
+                        $primaryColor 50%,
+                        rgba(187, 187, 187, 1) 50%,
+                        rgba(187, 187, 187, 1) 100%);
+                    @media (max-width: 900px) {
+                        background: $primaryColor;
+                        background: linear-gradient(180deg,
+                            $primaryColor 0%,
+                            $primaryColor 50%,
+                            rgba(187, 187, 187, 1) 50%,
+                            rgba(187, 187, 187, 1) 100%);
+                    }
+                }
+            }
+            &.pass {
+                div {
+                    background-color: lighten($primaryColor, 50);
+                    color: darken($primaryColor, 5);
+                }
+                &:before {
+                    border: 6px solid $primaryColor;
+                }
+                &:after {
+                    background-color: $primaryColor;
+                    @media (max-width: 900px) {
+                        background-color: $primaryColor;
+                    }
+                }
+            }
+            &:first-child {
+                &:after {
+                    content: "";
+                    background: rgb(187, 187, 187);
+                    background: linear-gradient(-90deg,
+                        rgba(187, 187, 187, 1) 0%,
+                        rgba(187, 187, 187, 1) 50%,
+                        rgba(255, 255, 255, 1) 50%,
+                        rgba(255, 255, 255, 1) 100%);
+                    @media (max-width: 900px) {
+                        width: 6px;
+                        background: rgb(187, 187, 187);
+                        background: linear-gradient(0deg,
+                            rgba(187, 187, 187, 1) 0%,
+                            rgba(187, 187, 187, 1) 50%,
+                            rgba(255, 255, 255, 1) 50%,
+                            rgba(255, 255, 255, 1) 100%);
+                    }
+                }
+                &.pass {
+                    &:after {
+                        background: $primaryColor;
+                        background: linear-gradient(-90deg,
+                            $primaryColor 0%,
+                            $primaryColor 50%,
+                            rgba(255, 255, 255, 1) 50%,
+                            rgba(255, 255, 255, 1) 100%);
+                        @media (max-width: 900px) {
+                            background: $primaryColor;
+                            background: linear-gradient(0deg,
+                                $primaryColor 0%,
+                                $primaryColor 50%,
+                                rgba(255, 255, 255, 1) 50%,
+                                rgba(255, 255, 255, 1) 100%);
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                &:after {
+                    background: rgb(187, 187, 187);
+                    background: linear-gradient(90deg,
+                        rgba(187, 187, 187, 1) 0%,
+                        rgba(187, 187, 187, 1) 50%,
+                        rgba(255, 255, 255, 1) 50%,
+                        rgba(255, 255, 255, 1) 100%);
+                }
+                &.active {
+                    &:after {
+                        background: $primaryColor;
+                        background: linear-gradient(90deg,
+                            $primaryColor 0%,
+                            $primaryColor 50%,
+                            rgba(255, 255, 255, 1) 50%,
+                            rgba(255, 255, 255, 1) 100%);
+                    }
+                }
+                @media (max-width: 900px) {
+                    &:after {
+                        background: rgb(187, 187, 187);
+                        background: linear-gradient(180deg,
+                            rgba(187, 187, 187, 1) 0%,
+                            rgba(187, 187, 187, 1) 50%,
+                            rgba(255, 255, 255, 1) 50%,
+                            rgba(255, 255, 255, 1) 100%);
+                    }
+                    &.active {
+                        &:after {
+                            background: $primaryColor;
+                            background: linear-gradient(180deg,
+                                $primaryColor 0%,
+                                $primaryColor 50%,
+                                rgba(255, 255, 255, 1) 50%,
+                                rgba(255, 255, 255, 1) 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 個資聲明
+.personal_statement_block {
+    border-radius: 5px;
+    padding: 2em 3em;
+    box-sizing: border-box;
+    font-size: 1.188em;
+    background-color: #F2F2F2;
+    margin-bottom: 1em;
+    @include screen('tablet') {
+        padding: 2em 2em;
+    }
+    @include screen('mobile') {
+        padding: 2em 1.5em;
+    }
+    @include screen('xs_mobile') {
+        padding: 1em 1em;
+    }
+    .title {
+        text-align: center;
+        font-size: 1.25em;
+        margin-bottom: 2em;
+        font-weight: bolder;
+        color: $aColor;
+        line-height: 1.6em;
+    }
+    ol {
+        border-bottom: 1px dotted #ccc;
+        li {
+            margin-bottom: 1.2em;
+            line-height: 1.7em;
+            ul {
+                list-style-type: none;
+                margin: 1em 0;
+                li {
+                    margin-bottom: .3em;
+                }
+            }
+        }
+    }
+    .check_grp {
+        text-align: center;
+        input {
+            margin: 0 .3em .3em 0;
+            width: 1.5em;
+            height: 1.5em
+        }
+    }
+}
+// 提醒
+.remind_block {
+    background-color: $color-red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: .5em 1em;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.188em;
+}
+// 填寫資料
+.fill_in_block {
+    border-radius: 5px;
+    padding: 2em 3em;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    margin-bottom: 1em;
+    text-align: center;
+    @include screen('tablet') {
+        padding: 2em 2em;
+    }
+    @include screen('mobile') {
+        padding: 2em 1.5em;
+    }
+    @include screen('xs_mobile') {
+        padding: 1em 1em;
+    }
+    .title {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        text-align: center;
+        font-weight: bolder;
+        padding: .6em 2em;
+        background-color: #fff;
+        border-radius: 50px;
+        display: inline-block;
+        line-height: 1.2em;
+    }
+    .form_content {
+        text-align: left;
+        .notice_info {
+            a {
+                color: $color-orange;
+                &:hover {
+                    color: $aHover
+                }
+            }
+        }
+        .radio_grp {
+            label {
+                margin-bottom: .4em;
+            }
+        }
+    }
+}
+// 信件成立 
+.letter_established {
+    border-radius: 5px;
+    padding: 2em 2em;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .title {
+        flex: 0 0 auto;
+        flex-basis: 100%;
+        font-size: 1.75em;
+        margin-bottom: 1em;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            background-image: url("../images/icon/icon_check2.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 36px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -30px;
+        }
+    }
+    .content {
+        flex: 0 0 auto;
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1.188em;
+        line-height: 1.8em;
+        margin-bottom: 1em;
+    }
+    .epilogue {
+        flex: 0 0 auto;
+        flex-basis: 100%;
+        text-align: right;
+        font-size: 1.188em;
+    }
+}
+// 問卷說明
+.question_directions {
+    font-size: 1.25em;
+    margin-bottom: 2em;
+}
+.question_block {
+    border-radius: 5px;
+    padding: 1.5em 3em 2em;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    margin-bottom: 1em;
+    text-align: center;
+    @include screen('tablet') {
+        padding: 1.5em 2em;
+    }
+    @include screen('mobile') {
+        padding: 1.5em 1.5em;
+    }
+    @include screen('xs_mobile') {
+        padding: 1em 1em;
+    }
+    .title {
+        font-size: 1.625em;
+        margin-bottom: 1em;
+        text-align: center;
+        font-weight: bolder;
+        padding: .3em 2em;
+        background-color: #fff;
+        border-radius: 50px;
+        display: inline-block;
+        line-height: 1.2em;
+    }
+    .question_content {
+        margin-bottom: 1.5em;
+        padding: 0 0 1.5em 0;
+        border-bottom: 1px dotted #ccc;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .topic {
+        font-size: 1.313em;
+        margin-bottom: 1em;
+        text-align: left;
+        line-height: 1.3em;
+        .votes {
+            color: $color-orange;
+        }
+    }
+    // 問題選擇
+    .question_select {
+        padding: 0 0 0 1em;
+        text-align: left;
+        font-size: 1.188em;
+        label {
+            margin-bottom: .5em;
+            input[type="radio"] {
+                width: 1.5em;
+                height: 1.5em;
+                margin-right: .5em;
+            }
+            img {
+                width: 90px;
+                vertical-align: middle;
+            }
+        }
+    }
+    // 問題結果
+    .question_result {
+        background-color: #fff;
+        border-radius: 5px;
+        min-height: 150px;
     }
 }

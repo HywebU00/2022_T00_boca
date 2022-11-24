@@ -10,6 +10,7 @@
     &:focus {
         color: $aHover;
         cursor: pointer;
+        
     }
 }
 @mixin aSetting_nocolor($COLOR:$color-word, $NOLINE:none) {

@@ -19,7 +19,7 @@
         top: 0;
         left: 0;
         background: #fff;
-         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         pointer-events: none;
         z-index: -1;
         @include screen('tablet') {
@@ -105,6 +105,7 @@
         box-sizing: border-box;
         position: relative;
         z-index: 99;
+        transition: .5s;
         a {
             display: inline-block;
             position: absolute;
@@ -115,6 +116,9 @@
             display: block;
             max-width: 370px;
             max-height: 70px;
+        }
+        @media(max-width: 1400px) {
+            margin: 18px 0 0 16px;
         }
         @include screen('tablet') {
             padding: 2px 60px;
@@ -247,7 +251,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
     .form_grp {
         flex: 0 0 auto;
         flex-basis: calc(100% - 130px);
@@ -263,9 +266,7 @@
             &:focus {
                 box-shadow: 0 0px 0px 2px $aFocus;
             }
-            
         }
-        
         button,
         .btn,
         .btn-search {
@@ -343,20 +344,17 @@
     z-index: 98;
     display: flex;
     display: none;
-    
-    
     flex-wrap: wrap;
     font-size: 1.125em;
     margin: 0;
     box-sizing: border-box;
     background-color: #333;
     padding: 30px 25px 20px;
-     color: #fff;
+    color: #fff;
     label {
         flex: 0 0 auto;
         flex-basis: 100%;
         margin-bottom: 1em;
-        
     }
     .search_content {
         flex: 0 0 auto;
@@ -368,9 +366,9 @@
         flex: 0 0 auto;
         flex-basis: calc(100% - 130px);
         margin: 0 0 20px;
-        @include screen('xs_mobile'){
-             flex-basis: 100%;
-              margin: 0 0 10px;
+        @include screen('xs_mobile') {
+            flex-basis: 100%;
+            margin: 0 0 10px;
         }
         input {
             margin: 0 0;
@@ -402,10 +400,10 @@
         padding: 0 0 0 .2em;
         margin: 0;
         box-sizing: border-box;
-        @include screen('xs_mobile'){
-              padding:0;
-              margin-bottom: 20px;
-              flex-basis: 100%;
+        @include screen('xs_mobile') {
+            padding: 0;
+            margin-bottom: 20px;
+            flex-basis: 100%;
         }
         button,
         .btn,
@@ -417,8 +415,8 @@
             &:focus {
                 box-shadow: none !important;
             }
-            @include screen('xs_mobile'){
-                width:100%;
+            @include screen('xs_mobile') {
+                width: 100%;
             }
         }
     }

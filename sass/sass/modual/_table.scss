@@ -10,19 +10,46 @@ table {
         font-weight: bold;
         text-align: left;
         font-size: 0;
-        margin-bottom:0;
+        margin-bottom: 0;
         line-height: 0;
-
         .summary {
             display: block;
             font-size: 0em;
             font-weight: normal;
         }
     }
-    th, 
+    th,
     td {
-        padding:.8em .5em;
+        padding: .8em .5em;
         text-align: left;
+        &.aCenter {
+            text-align: center;
+        }
+        &.aRight {
+            text-align: right;
+        }
+        &.date {
+            text-align: center;
+            color: #666;
+            // white-space: nowrap;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        &.num {
+            text-align: center;
+            color: #666;
+            @include screen('mobile') {
+                text-align: left;
+            }
+        }
+        button{
+            margin:0;
+            &.btn{
+                margin:0;
+                padding:0.3em 1.25em;
+            }
+        }
     }
     td {
         border: #ddd 1px solid;
@@ -39,7 +66,7 @@ table {
         white-space: nowrap;
     }
     &.table_hover {
-        tr{
+        tr {
             transition: .5s;
         }
         tr:hover {
@@ -52,7 +79,6 @@ table {
         }
     }
 }
-
 .table_list {
     margin-bottom: 2em;
     @include screen('mobile') {
@@ -94,10 +120,30 @@ table {
                 font-weight: bold;
                 color: #000;
             }
+            &.aCenter {
+                text-align: left;
+            }
+            &.aRight {
+                text-align: left;
+            }
+            &.date {
+                text-align: center;
+                color: #666;
+                // white-space: nowrap;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
         }
     }
 }
-
 // fix_th_table
 .fix_th_table {
     margin: 1em 0;
@@ -154,7 +200,6 @@ table {
         }
     }
 }
-
 .table_wrapper {
     @include screen('mobile') {
         width: 100%;
@@ -172,22 +217,18 @@ table {
         }
     }
 }
-
 .scroltable {
     min-width: 600px !important;
 }
-
 .scroltable-wrapper {
     position: relative;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     overflow-y: hidden;
 }
-
 .scroltable-container {
     overflow: auto;
 }
-
 .scroltable-nav {
     display: none;
     position: absolute;
@@ -196,7 +237,6 @@ table {
     cursor: pointer;
     z-index: 9;
 }
-
 .scroltable-nav.scroltable-nav-left {
     left: 0;
     @include gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), horizontal);
@@ -222,7 +262,6 @@ table {
         }
     }
 }
-
 .scroltable-nav.scroltable-nav-right {
     right: 0;
     @include gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), horizontal);
@@ -247,7 +286,6 @@ table {
         }
     }
 }
-
 @keyframes arrow_left {
     from {
         left: -.2em;
@@ -256,7 +294,6 @@ table {
         left: .3em;
     }
 }
-
 @keyframes arrow_right {
     from {
         right: -.2em;

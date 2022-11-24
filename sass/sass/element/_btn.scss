@@ -1,7 +1,7 @@
 // 按鈕設定
 $btn-font-color:#fff;
 $btn-border:darken($btn-font-color, 5);
-$btn-padding:.5em 1.25em;
+$btn-padding:.5em 2em;
 $btn-radius:.2em;
 // 按鈕外框
 .btn_grp {
@@ -100,7 +100,7 @@ $btn-radius:.2em;
 }
 .btn-submit {
     // @extend %btn;
-    @include btn_setting(#408620, #FFF);
+    @include btn_setting($aColor, #FFF);
 }
 .btn-reset {
     // @extend %btn;
@@ -126,14 +126,14 @@ $btn-radius:.2em;
 // 次要按鈕
 .btn-secondary{
     background: #fff !important;
-    color: darken($primaryColor, 15)!important;
-    border: solid 1px $primaryColor!important;
+    color: #666!important;
+    border: solid 1px #ccc!important;
     text-shadow: none !important;
     &:hover,
     &:focus {
-        color: darken($primaryColor, 30)!important;
+        color: $color-word!important;
         background: #b5deff!important;
-        border: solid 1px #b5deff!important;
+        border: solid 1px #ccc!important;
     }
 }
 // 一般按鈕
@@ -179,7 +179,7 @@ $btn-radius:.2em;
     font-size: $font-size * 1.5; //24px
 }
 .btn-lg {
-    font-size: $font-size * 1.25; //20px
+    font-size: $font-size * 1.188; //20px
 }
 .btn-sm {
     font-size: $font-size * .938; //15px

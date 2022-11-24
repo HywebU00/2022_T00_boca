@@ -43,7 +43,7 @@ body {
         text-align: center;
         display: block;
         position: relative;
-        
+        color:#666;
         &:before {
             content: '';
             width: 120px;
@@ -95,6 +95,7 @@ body {
         text-align: left;
         display: block;
         position: relative;
+        line-height: 1.5;
         &:before {
             content: '';
             width: 120px;

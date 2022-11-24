@@ -108,6 +108,9 @@
             border-radius:15px 15px 0 0;
             padding: 10px 0;
             font-size:1.5em;
+            @include screen('mobile'){
+                border-radius:15px;
+            }
             img {
                 vertical-align: middle;
                 margin-right: 15px;
@@ -212,6 +215,9 @@
 .apply_passport_tab {
     .tabContent {
         background-color: #f0f2f3;
+        @include screen('mobile'){
+                border-radius:15px;
+            }
         .remark {
             color: #C63E00;
             text-align: center;

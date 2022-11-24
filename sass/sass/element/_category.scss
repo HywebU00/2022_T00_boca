@@ -4,6 +4,7 @@
     margin: 1em auto 1em;
     ul {
         @include li-reset;
+         font-size: 1.188em;
         li {
             margin: 0px 5px 5px 0px;
             display: block;
@@ -18,7 +19,7 @@
         box-sizing: border-box;
         border-radius:5px;
         background-color:#408620 !important;
-        font-size: 1.188em;
+       
 
         &:hover,
         &:focus {

@@ -1,4 +1,4 @@
-$form_title_width :150px; // 表單title寬度
+$form_title_width :200px; // 表單title寬度
 $m-gutter: 4px; // Flex grid system default margin
 @mixin formStyle($f_color:$color-word, $f_border:$color-gray, $f_radius:$btn-radius) {
     color: $f_color;
@@ -228,10 +228,14 @@ select::-ms-expand {
 }
 
 .form_grid {}
-
+.btn_grp{
+    margin-top: 1em;
+}
 .flex-form {
     font-size: 100%;
+    font-size: 1.125em;
     margin: .5em 0;
+    text-align: left;
     // 表單的線 ----------------------- start
     // border-top: 1px solid #DDD;
     .form_grp {
@@ -396,7 +400,7 @@ select::-ms-expand {
             // padding: 18px 0;
             color:$color-word;
             font-weight: 500;
-            font-size: 1.125em;
+            
            
         }
     }
@@ -1166,6 +1170,7 @@ select::-ms-expand {
         .radio_grp {
             label {
                 flex-basis: auto;
+
             }
         }
     }
@@ -1326,22 +1331,22 @@ input[type="password"],
 input[type="file"],
 input[type="tel"],
 input[type="mail"],
-input[type="number"] {
+input[type="number"]{
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
-        color: darken($color-gray, 20);
+        color: #666;
     }
     &::-moz-placeholder {
         /* Firefox 19+ */
-        color: darken($color-gray, 20);
+        color: #666;
     }
     &:-ms-input-placeholder {
         /* IE 10+ */
-        color: darken($color-gray, 20);
+        color: #666;
     }
     &:-moz-placeholder {
         /* Firefox 18- */
-        color: darken($color-gray, 20);
+        color: #666;
     }
 }
 
@@ -1370,8 +1375,9 @@ input[type="submit"] {
 
 textarea {
     @include formStyle();
-    height: 5em;
+    height: 8em;
     overflow-y: scroll;
+    color:#666;
     @include screen('xs_mobile') {
         width: 100%;
     }
