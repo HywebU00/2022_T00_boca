@@ -24,11 +24,11 @@ $(function() {
         $('.search_btnblock .search').slideDown().addClass('addflex');
         $('.font_size ul').slideUp();
     })
-    $('.search_btnblock .search_btn').focus(function(){
-         $('.search_btnblock .search').slideDown();
+    $('.search_btnblock .search_btn').focus(function() {
+        $('.search_btnblock .search').slideDown();
     })
-     $('.search_btnblock .search .keywordideas ul li:last-child>a').focusout(function(){
-         $('.search_btnblock .search').slideUp();
+    $('.search_btnblock .search .keywordideas ul li:last-child>a').focusout(function() {
+        $('.search_btnblock .search').slideUp();
     })
     //sticky sidebar
     if ($('.stickySidebar').length > 0) {
@@ -139,13 +139,14 @@ $(function() {
     })
     // cppic_slider
     $('.cppic_slider').slick({
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 1500,
+        arrows: true,
         // pauseOnHover: true,
         // pauseOnFocus: true,
         // focusOnSelect: true,
@@ -158,22 +159,18 @@ $(function() {
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         }, {
             breakpoint: 545,
             settings: {
-                arrows: true,
                 slidesToShow: 2,
                 slidesToScroll: 2
             }
         }, {
             breakpoint: 480,
             settings: {
-                arrows: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
             }
         }]
     });
@@ -221,45 +218,42 @@ $(function() {
             e.preventDefault();
         });
     });
-
 });
 // 快捷列
 $(function() {
     // 了解出國資訊
     $('.abroad').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.travel_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.travel_block').find('a:first').focus(); 
+        $('.travel_block').find('a:first').focus();
     });
-
     // 申辦護照
     $('.passport').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.apply_passport_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.apply_passport_block').find('button:first').focus(); 
+        $('.apply_passport_block').find('button:first').focus();
     });
     // 國人旅外及外籍人士來臺資訊
     $('.contact').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.people_exchanges_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.people_exchanges_block').find('a:first').focus(); 
+        $('.people_exchanges_block').find('a:first').focus();
     });
     // 辦理文件證明
     $('.document').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.documentary_proof_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.documentary_proof_block').find('a:first').focus(); 
+        $('.documentary_proof_block').find('a:first').focus();
     });
     // 最新消息
     $('.news').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.news_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.news_block').find('button:first').focus(); 
+        $('.news_block').find('button:first').focus();
     });
     // 影音專區
     $('.video').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.public_use_block').offset().top - 60 }, 0, 'easeOutExpo');
-        $('.public_use_block').find('button:first').focus(); 
+        $('.public_use_block').find('button:first').focus();
     });
     // 資訊圖像化 
     $('.picture').click(function() {
         $('body,html').stop(true, true).animate({ scrollTop: $('.public_use_group2').offset().top - 140 }, 0, 'easeOutExpo');
         $('.public_use_group2').find('button:first').focus(); //可以這樣加
     });
-    
 })

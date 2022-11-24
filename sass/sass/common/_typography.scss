@@ -2,9 +2,9 @@
 .cp {
     font-size: 1em ;
     line-height: 1.65em;
-    @include screen('xs_mobile') {
-        font-size: 1em * 1.2;
-    }
+    // @include screen('xs_mobile') {
+    //     font-size: 1em * 1.2;
+    // }
     h1 {
         font-size: 2em;
     }
