@@ -106,6 +106,8 @@
         position: relative;
         z-index: 99;
         transition: .5s;
+        animation-name:h1dolly;
+    animation-duration:1s;
         a {
             display: inline-block;
             position: absolute;
@@ -116,6 +118,16 @@
             display: block;
             max-width: 370px;
             max-height: 70px;
+        }
+        @keyframes h1dolly {
+            from {
+                top: -70px;
+                opacity: 0;
+            }
+            to {
+                top: 0;
+                opacity: 1;
+            }
         }
         @media(max-width: 1400px) {
             margin: 18px 0 0 16px;
@@ -224,30 +236,32 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 60px;
-    z-index: 10;
+    top: 78px;
+    z-index: 100;
     width: 100%;
     text-align: left;
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     font-size: 1.125em;
     margin: 0;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, .9);
     padding: 30px 25px 20px;
-    // border: 1px solid #eee;
-    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     color: #fff;
+    display: none;
     @include screen('tablet') {
         display: none;
     }
     label {
-        flex: 0 0 none;
-        flex-basis: 150px;
+        // flex: 0 0 none;
+        // flex-basis: 150px;
+       float: left;
+        width:150px;
     }
     .search_content {
-        flex: 0 0 auto;
-        flex-basis: calc(100% - 150px);
+        // flex: 0 0 auto;
+        // flex-basis: calc(100% - 150px);
+      
         display: flex;
         flex-wrap: wrap;
     }
@@ -316,17 +330,17 @@
                 &:before {
                     content: '、';
                     position: absolute;
-                    right: -10px;
+                    left: -18px;
                     top: 2px;
                 }
-                &:last-child {
+                &:first-child {
                     &:before {
                         display: none;
                     }
                 }
             }
             a {
-                padding: .2em 0.5em;
+                padding: .2em 1em .2em 0;
                 color: #fff;
             }
         }

@@ -30,6 +30,7 @@ body {
     padding: 0;
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
+    // outline: 1px solid red;
 }
 
 .main {
@@ -67,6 +68,12 @@ body {
     }
     &.large_size {
         font-size: 1.125em;
+    }
+    .accesskey{
+        &:focus{
+          top:20px;  
+        }
+       
     }
 }
 ////////////////////////////////////////////////////////////

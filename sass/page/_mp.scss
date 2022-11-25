@@ -436,7 +436,7 @@ a.more {
 // 大圖區塊
 .bigpicture_slider_block {
     position: relative;
-    padding: 60px 0 80px;
+    padding: 50px 0 80px;
     // 首頁大圖輪播 
     .bigpicture_Slider {
         width: 75%;
@@ -452,12 +452,7 @@ a.more {
                     padding: 0;
                     position: relative;
                     margin-bottom: 20px;
-                    @include aspect-ratio(5,
-                    2); //PC版比例
-                    // @include screen('tablet') {
-                    //     @include aspect-ratio(5,
-                    //     3); //Mobile版比例
-                    // }
+                    @include aspect-ratio(6, 2.7);
                 }
                 .caption {
                     position: relative;

@@ -19,7 +19,6 @@ $(function() {
         $('.font_size ul').slideUp();
     })
     // Search
-    $('.search_btnblock .search').hide();
     $('.search_btnblock .search_btn').click(function() {
         $('.search_btnblock .search').slideDown().addClass('addflex');
         $('.font_size ul').slideUp();

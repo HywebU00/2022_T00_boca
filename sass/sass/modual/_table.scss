@@ -20,7 +20,7 @@ table {
     }
     th,
     td {
-        padding: .8em .5em;
+        padding: .7em .5em;
         text-align: left;
         &.aCenter {
             text-align: center;
@@ -39,6 +39,7 @@ table {
         &.num {
             text-align: center;
             color: #666;
+            white-space: nowrap;
             @include screen('mobile') {
                 text-align: left;
             }
@@ -47,9 +48,14 @@ table {
             margin:0;
             &.btn{
                 margin:0;
-                padding:0.3em 1.25em;
+                padding:0.1em 1.25em;
             }
         }
+    }
+    th{
+        &.num{
+            color: #fff;
+        } 
     }
     td {
         border: #ddd 1px solid;
@@ -63,7 +69,15 @@ table {
         color: #fff;
         border: #DDD 1px solid;
         text-align: center;
-        white-space: nowrap;
+        // white-space: nowrap;
+        a{
+            color:#fff!important;
+            text-decoration: underline!important;
+            &:hover{
+
+                text-decoration:none!important;
+            }
+        }
     }
     &.table_hover {
         tr {

@@ -40,11 +40,12 @@
         background: #FFF;
         margin-bottom: 1em;
         font-size: 1.125em;
-        td {
+         td {
             p {
                 padding: 0;
                 margin: 0;
                 font-size: 1em;
+                line-height: 1.5em;
             }
         }
     }
@@ -103,7 +104,7 @@
         flex-wrap: wrap;
         position: relative;
         padding: .5em 0 .5em 1.5em;
-        border-bottom: solid 1px #eee;
+        border-bottom: dotted 1px #ccc;
         &:before {
             content: '·';
             font-size: 2em;
@@ -168,7 +169,6 @@
                         color: #fff;
                     }
                 }
-
             }
         }
         div {
@@ -429,7 +429,7 @@
     .introduction_group {
         flex: 1 1 auto;
         flex-basis: calc(100% - 25% - 2em);
-        padding-top:.5em;
+        padding-top: .5em;
         @include screen('tablet') {
             flex-basis: calc(100% - 35% - 2em);
         }
@@ -566,7 +566,7 @@
             width: 20%;
             white-space: normal;
             text-align: right;
-            padding: 0.8em .5em;
+           
             @include screen('mobile') {
                 display: block;
                 width: 100%;
@@ -574,7 +574,7 @@
             }
         }
         td {
-            padding: 0.8em .5em;
+           
             @include screen('mobile') {
                 display: block;
                 width: 100%;
