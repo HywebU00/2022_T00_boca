@@ -256,3 +256,31 @@ $(function() {
         $('.public_use_group2').find('button:first').focus(); //可以這樣加
     });
 })
+
+// 示警地區
+$(function(){
+    $('.area01_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $(' #area01').offset().top - 100}, 0, 'easeOutExpo');
+        
+    });
+    $('.area02_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('#area02').offset().top - 100 }, 0, 'easeOutExpo');
+        
+    });
+    $('.area03_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('#area03').offset().top - 100 }, 0, 'easeOutExpo');
+        
+    });
+    $('.area04_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('#area04').offset().top - 100 }, 0, 'easeOutExpo');
+        
+    });
+    $('.area05_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('#area05').offset().top - 100 }, 0, 'easeOutExpo');
+        
+    });
+    $('.area06_btn').click(function() {
+        $('body,html').stop(true, true).animate({ scrollTop: $('#area06').offset().top - 100 }, 0, 'easeOutExpo');
+        
+    });
+})

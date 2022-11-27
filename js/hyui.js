@@ -750,7 +750,7 @@ $(function() {
         // alt+S 查詢
         if (e.altKey && e.keyCode == 83) {
             $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
-            $('.search').find('input[type="text"]').focus();
+            $('.search').slideDown().find('input[type="text"]').focus();
         }
         // alt+U header
         if (e.altKey && e.keyCode == 85) {
@@ -759,7 +759,7 @@ $(function() {
         }
         // alt+C 主要內容區
         if (e.altKey && e.keyCode == 67) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - 90 }, 800, 'easeOutExpo');
             $('.main').find('.accesskey').focus();
         }
         // alt+Z footer

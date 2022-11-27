@@ -722,7 +722,7 @@ a.more {
                             &.orangeblock {
                                 background-color: #f39800;
                             }
-                            &.graylock {
+                            &.grayblock {
                                 background-color: #959595;
                             }
                         }
@@ -737,17 +737,7 @@ a.more {
                     }
                 }
             }
-            %alert_color {
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                margin-right: 15px;
-                background-color: #959595;
-                border-radius: 2px;
-                font-size: 0;
-                flex: 0 0 auto;
-                flex-basis: 24px;
-            }
+           
             .alert_nation_list {
                 ul {
                     margin: 20px 20px 40px;
@@ -781,7 +771,7 @@ a.more {
                                 @extend %alert_color;
                                 background-color: #f39800;
                             }
-                            .graylock {
+                            .grayblock {
                                 @extend %alert_color;
                                 background-color: #959595;
                             }

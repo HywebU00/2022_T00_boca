@@ -230,6 +230,9 @@ select::-ms-expand {
 .form_grid {}
 .btn_grp{
     margin-top: 1em;
+    &.form_inline{
+        justify-content: center;
+    }
 }
 .flex-form {
     font-size: 100%;

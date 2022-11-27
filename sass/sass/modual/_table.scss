@@ -63,6 +63,27 @@ table {
         a {
             word-break: break-all;
         }
+        .square {
+            @extend %alert_color;
+            vertical-align: middle;
+            
+            
+            &.redblock {
+                background-color: #e60012;
+            }
+            &.yellowblock {
+                background-color: #fff100;
+            }
+            &.orangeblock {
+                background-color: #f39800;
+            }
+            &.grayblock {
+                background-color: #959595;
+            }
+        }
+        .date{
+            color:$color-red;
+        }
     }
     th {
         background-color: #1a8096;

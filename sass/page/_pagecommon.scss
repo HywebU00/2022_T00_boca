@@ -1,3 +1,10 @@
+h3.title {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        font-weight: bolder;
+        color: $color-word;
+        letter-spacing: 0.05em;
+    }
 // lp備註
 .remark_block {
     display: block;
@@ -306,13 +313,14 @@
 }
 // 現場受理狀態 
 .accept_state_block {
-    h3 {
+    h3.title {
         color: $primaryColor;
-        font-size: 1.562em;
-        margin: 0 0 .5em;
+       
+       
         padding: 0 0 0.5em;
         border-bottom: 1px solid $primaryColor;
     }
+    
     .accept_update_time {
         font-size: 1.125em;
         margin-bottom: 1em;
@@ -981,14 +989,10 @@
         min-height: 150px;
     }
 }
+
 // 最新警示國家
 .warning_country_block {
-    .title {
-        font-size: 1.5em;
-        margin-bottom: 1em;
-        font-weight: bolder;
-        color: $color-word;
-    }
+    
     .warning_country_group {
         display: flex;
         margin-bottom: 1em;
@@ -1005,17 +1009,7 @@
             @include screen('mobile') {
                 flex-wrap: wrap;
             }
-            %alert_color {
-                width: 24px;
-                height: 24px;
-                display: inline-block;
-                margin-right: 15px;
-                background-color: #959595;
-                border-radius: 2px;
-                font-size: 0;
-                flex: 0 0 auto;
-                flex-basis: 24px;
-            }
+            
             .warning_country_list {
                 margin-bottom: 1em;
                 padding: 1em;
@@ -1058,7 +1052,7 @@
                                 @extend %alert_color;
                                 background-color: #f39800;
                             }
-                            .graylock {
+                            .grayblock {
                                 @extend %alert_color;
                                 background-color: #959595;
                             }
@@ -1112,7 +1106,7 @@
                             &.orangeblock {
                                 background-color: #f39800;
                             }
-                            &.graylock {
+                            &.grayblock {
                                 background-color: #959595;
                             }
                         }
@@ -1138,6 +1132,7 @@
         background-color: #fdfaec;
         border-radius: 5px;
         padding: .5em 1em;
+        margin-bottom: 2em;
         .flex-form {
             justify-content: center;
             @media(max-width: 850px){
@@ -1187,4 +1182,8 @@
             }
         }
     }
+}
+.googleSearch_block{
+    font-size: 1.25em;
+    
 }

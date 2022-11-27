@@ -40,7 +40,7 @@
         background: #FFF;
         margin-bottom: 1em;
         font-size: 1.125em;
-         td {
+        td {
             p {
                 padding: 0;
                 margin: 0;
@@ -93,6 +93,7 @@
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 0.2em;
         border-bottom: 1px solid $primaryColor;
+        letter-spacing: 0.05em;
     }
     ul {
         list-style-type: none;
@@ -566,7 +567,6 @@
             width: 20%;
             white-space: normal;
             text-align: right;
-           
             @include screen('mobile') {
                 display: block;
                 width: 100%;
@@ -574,7 +574,6 @@
             }
         }
         td {
-           
             @include screen('mobile') {
                 display: block;
                 width: 100%;
@@ -611,41 +610,6 @@
         width: 100%;
         height: 100%;
     }
-    %alert_color {
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        margin-right: 15px;
-        background-color: #959595;
-        border-radius: 2px;
-        font-size: 0;
-        flex: 0 0 auto;
-        flex-basis: 24px;
-    }
-    td {
-        .square {
-            flex: 0 0 auto;
-            flex-basis: 24px;
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            margin-right: 10px;
-            background-color: #959595;
-            border-radius: 2px;
-            font-size: 0;
-            vertical-align: middle;
-            &.redblock {
-                background-color: #e60012;
-            }
-            &.yellowblock {
-                background-color: #fff100;
-            }
-            &.orangeblock {
-                background-color: #f39800;
-            }
-            &.graylock {
-                background-color: #959595;
-            }
-        }
-    }
+    
+    
 }

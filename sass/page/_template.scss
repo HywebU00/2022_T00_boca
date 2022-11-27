@@ -32,7 +32,6 @@ body {
     max-width: $container-max; //請看_variable.scss
     // outline: 1px solid red;
 }
-
 .main {
     position: relative;
     margin: 0 auto;
@@ -44,7 +43,7 @@ body {
         text-align: center;
         display: block;
         position: relative;
-        color:#666;
+        color: #666;
         &:before {
             content: '';
             width: 120px;
@@ -69,24 +68,23 @@ body {
     &.large_size {
         font-size: 1.125em;
     }
-    .accesskey{
-        &:focus{
-          top:20px;  
+    .accesskey {
+        &:focus {
+            top: 20px;
         }
-       
     }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-bottom:80px;
-    @include screen('tablet'){
-        padding-top:80px;
+    padding-bottom: 80px;
+    @include screen('tablet') {
+        padding-top: 80px;
     }
     >.container {
         @include gutter(200px); //gutter 代表左右要留白
         display: flex;
-        @include screen('tablet'){
+        @include screen('tablet') {
             @include gutter(150px);
         }
         @include screen('mobile') {
@@ -112,7 +110,7 @@ body {
             position: absolute;
             left: 0;
             bottom: 0px;
-            top:auto;
+            top: auto;
             margin-left: 0;
         }
         span {
@@ -153,8 +151,21 @@ body {
             }
         }
     }
-    
 }
 .hidden {
     display: none;
+}
+
+// 
+%alert_color {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #959595;
+    border-radius: 2px;
+    font-size: 0;
+    flex: 0 0 auto;
+    flex-basis: 24px;
+    
 }
