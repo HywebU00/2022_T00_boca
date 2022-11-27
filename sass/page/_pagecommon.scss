@@ -1,10 +1,10 @@
 h3.title {
-        font-size: 1.5em;
-        margin-bottom: 1em;
-        font-weight: bolder;
-        color: $color-word;
-        letter-spacing: 0.05em;
-    }
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    font-weight: bolder;
+    color: $color-word;
+    letter-spacing: 0.05em;
+}
 // lp備註
 .remark_block {
     display: block;
@@ -315,12 +315,9 @@ h3.title {
 .accept_state_block {
     h3.title {
         color: $primaryColor;
-       
-       
         padding: 0 0 0.5em;
         border-bottom: 1px solid $primaryColor;
     }
-    
     .accept_update_time {
         font-size: 1.125em;
         margin-bottom: 1em;
@@ -989,10 +986,8 @@ h3.title {
         min-height: 150px;
     }
 }
-
 // 最新警示國家
 .warning_country_block {
-    
     .warning_country_group {
         display: flex;
         margin-bottom: 1em;
@@ -1009,7 +1004,6 @@ h3.title {
             @include screen('mobile') {
                 flex-wrap: wrap;
             }
-            
             .warning_country_list {
                 margin-bottom: 1em;
                 padding: 1em;
@@ -1135,7 +1129,7 @@ h3.title {
         margin-bottom: 2em;
         .flex-form {
             justify-content: center;
-            @media(max-width: 850px){
+            @media(max-width: 850px) {
                 flex-wrap: wrap;
             }
             &.form_inline {
@@ -1145,11 +1139,11 @@ h3.title {
                 flex: 0 0 auto;
                 flex-basis: 40%;
                 padding: 0;
-                @media(max-width: 850px){
+                @media(max-width: 850px) {
                     margin-bottom: 5px;
                     flex-basis: 45%;
                 }
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     flex-basis: 100%;
                     margin-bottom: 0;
                 }
@@ -1166,14 +1160,14 @@ h3.title {
                 line-height: 0;
             }
             .btn_grp {
-                flex:0 0 auto;
-                margin:0 0 0 5px;
-                @media(max-width: 850px){
+                flex: 0 0 auto;
+                margin: 0 0 0 5px;
+                @media(max-width: 850px) {
                     flex-basis: 100%;
-                      margin:0;
+                    margin: 0;
                 }
-                @include screen('xs_mobile'){
-                     margin:10px 0 0 ;
+                @include screen('xs_mobile') {
+                    margin: 10px 0 0;
                 }
                 .btn {
                     margin: 0;
@@ -1183,7 +1177,281 @@ h3.title {
         }
     }
 }
-.googleSearch_block{
+.googleSearch_block {
     font-size: 1.25em;
-    
+}
+// 出國登錄說明
+.goabroad_directions {
+    font-size: 1.188em;
+    .emphasis {
+        font-weight: bolder;
+    }
+    p {
+        margin-bottom: 2em;
+        line-height: 1.7em;
+    }
+}
+// 出國登錄
+.login_abroad_group {
+    display: flex;
+    @include screen('tablet') {
+        flex-wrap: wrap;
+    }
+    .login_abroad_leftblock {
+        flex: 0 0 auto;
+        flex-basis: 28%;
+        position: relative;
+        z-index: 10;
+        @include screen('tablet') {
+            flex-basis: 100%;
+            margin-bottom: 3em;
+        }
+        .login_details_block {
+            background-color: #fff;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 1.5em;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            .title {
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                font-size: 1.25em;
+                color: $color-word;
+                background-color: #ff9b37;
+                margin-bottom: 1em;
+                padding: .5em;
+                line-height: 1.5em;
+                text-align: center;
+                border-radius: 5px;
+                font-weight: bolder;
+                span {
+                    display: block;
+                }
+            }
+            .content {
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                line-height: 1.5em;
+                font-size: 1.125em;
+                margin-bottom: .5em;
+                @include screen('tablet') {
+                    flex-basis: 50%;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+            }
+            .qrcode {
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                margin-bottom: .5em;
+                text-align: center;
+                @include screen('tablet') {
+                    flex-basis: 50%;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                }
+                img {
+                    width: 100%;
+                    @include screen('tablet') {
+                        width: 70%;
+                    }
+                }
+            }
+            .lineblock {
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                margin-bottom: 2em;
+                a {
+                    background-color: #57b763;
+                    padding: 5px;
+                    display: block;
+                    text-align: center;
+                    border-radius: 5px;
+                    font-size: 1.25em;
+                    color: #fff;
+                    font-weight: bolder;
+                    img {
+                        width: 50px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .remark {
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                text-align: center;
+                line-height: 1.5em;
+                font-size: 1.125em;
+                margin-bottom: .5em;
+                span {
+                    display: block;
+                    color: $color-red;
+                }
+            }
+        }
+    }
+    .login_abroad_rightblock {
+        flex: 1 1 auto;
+        flex-basis: calc(100% - 28%);
+        position: relative;
+        z-index: 9;
+        @include screen('tablet') {
+            flex-basis: 100%;
+        }
+        .login_item_block {
+            background-image: url('../images/login_item_block_bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            min-height: 980px;
+            @include screen('xs_mobile') {
+                background-position: center 300px;
+                min-height: 1000px;
+                background-size: 140%;
+            }
+            @media(max-width: 450px) {
+                background-position: center 400px;
+                min-height: 950px;
+            }
+            @media(max-width: 380px) {
+                min-height: 850px;
+            }
+            @media(max-width: 350px) {
+                background-position: center 450px;
+                min-height: 900px;
+            }
+            ul {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                justify-content: center;
+                @include screen('xs_mobile') {
+                    flex-wrap: wrap;
+                }
+                li {
+                    margin: 0 8px;
+                    @include screen('xs_mobile') {
+                        flex: 1 1 auto;
+                        flex-basis: 46%;
+                        margin: 0 2% 1em;
+                    }
+                    @media(max-width: 450px) {
+                        flex-basis: 100%;
+                        margin: 0 0 .5em;
+                    }
+                    a {
+                        display: block;
+                        border-radius: 5px;
+                        background-color: #5e7644;
+                        color: #fff;
+                        padding: 6.5em 1.5em 1em;
+                        font-size: 1.188em;
+                        transition: .5s;
+                        text-shadow: 0 0 5px #333, 0 0 3px #333;
+                        text-align: center;
+                        &:hover {
+                            background-color: darken(#5e7644, 10);
+                            transform: scale(1.1);
+                        }
+                        &.personal_abroad {
+                            background-image: url('../images/login_item_icon01.svg');
+                            background-repeat: no-repeat;
+                            background-position: center 15px;
+                            background-size: 160px 90px;
+                        }
+                        &.Working_vacation {
+                            background-image: url('../images/login_item_icon02.svg');
+                            background-repeat: no-repeat;
+                            background-position: center 15px;
+                            background-size: 160px 90px;
+                        }
+                        &.group_abroad {
+                            background-image: url('../images/login_item_icon03.svg');
+                            background-repeat: no-repeat;
+                            background-position: center 15px;
+                            background-size: 160px 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 資料預覽
+.preview_block {
+    text-align: center;
+    h3.title {
+        font-size: 1.625em;
+        text-align: center;
+        display: inline-block;
+        background-color: $primaryColor;
+        padding: 0.5em 2em;
+        color: #fff;
+        border-radius: 50px;
+    }
+    .preview_group {
+        padding: 2em;
+        background-color: #f2f2f2;
+        margin-bottom: 1em;
+        @include screen('mobile'){
+             padding: 1.5em;
+        }
+        table {
+            th {
+                text-align: right;
+                width: 30%;
+                @include screen('mobile') {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+            td {
+                background-color: #fff;
+                @include screen('mobile') {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+                button {
+                    margin: 0 10px;
+                }
+            }
+        }
+        .form_grp {
+            border-bottom: none;
+            .form_title {
+                max-width: 30%;
+                flex: 0 0 30%;
+                width: 30%;
+                text-align: right;
+                @include screen('mobile') {
+                    max-width: 100%;
+                    flex: 0 0 100%;
+                    width: 100%;
+                    text-align: left;
+
+                }
+            }
+            .form_content {
+                max-width: calc(100% - 30%);
+                flex: 1 1 auto;
+                flex-basis: calc(100% - 30%);
+                @include screen('mobile') {
+                    max-width: 100%;
+                    flex: 1 1 auto;
+                    flex-basis: 100%;
+                }
+                .btn-secondary{
+                    padding: 0.5em 1em;
+                    @media(max-width: 480px){
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
 }
