@@ -104,7 +104,8 @@ $btn-radius:.2em;
 }
 .btn-reset {
     // @extend %btn;
-    color:#fff;
+   
+     @include btn_setting(#666, #FFF);
 }
 .btn-search {
     // @extend %btn;
