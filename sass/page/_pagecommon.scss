@@ -1326,17 +1326,22 @@ h3.title {
             min-height: 980px;
             @include screen('xs_mobile') {
                 background-position: center 300px;
-                min-height: 1000px;
+                min-height:1075px;
                 background-size: 140%;
             }
+            @media(max-width: 500px) {
+                background-position: center 300px;
+                min-height:1000px;
+            }
             @media(max-width: 450px) {
-                background-position: center 400px;
-                min-height: 950px;
+                 background-position: center 400px;
+               
             }
-            @media(max-width: 380px) {
-                min-height: 850px;
+            @media(max-width: 400px) {
+                background-position: center 450px;
+                min-height: 970px;
             }
-            @media(max-width: 350px) {
+             @media(max-width: 350px) {
                 background-position: center 450px;
                 min-height: 900px;
             }
