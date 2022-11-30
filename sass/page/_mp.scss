@@ -150,6 +150,9 @@ a.more {
         margin: 0em 2em 2em;
         left: 0;
     }
+    @include screen('xs_mobile'){
+        margin: 0em 20px 2em;
+    }
     .sidebar_list {
         margin-bottom: 5px;
         display: block;
@@ -567,6 +570,9 @@ a.more {
         @include screen('mobile') {
             padding: 30px 30px 30px;
         }
+        @include screen('xs_mobile'){
+            padding: 30px 20px 30px;
+        }
     }
     .pigeon_01 {
         position: absolute;
@@ -691,6 +697,9 @@ a.more {
                 border-radius: 15px;
                 padding: 30px;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                @include screen('xs_mobile'){
+                    padding: 30px 20px;
+                }
                 ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -977,6 +986,7 @@ a.more {
                 flex-basis: 100%;
                 margin-right: 0;
                 margin-bottom: 1em;
+                padding: 30px 20px;
             }
             .title {
                 font-size: 1.5em;
@@ -1033,6 +1043,7 @@ a.more {
                 flex: 1 1 100%;
                 flex-basis: 100%;
                 margin-left: 0;
+                padding: 30px 20px;
             }
             .title {
                 font-size: 1.5em;
@@ -1197,6 +1208,9 @@ a.more {
         @include screen('tablet') {
             flex-wrap: wrap;
         }
+        @include screen('xs_mobile'){
+             padding: 2.5em 20px 0.5em;
+        }
         .directions {
             flex: 0 0 29%;
             flex-basis: 29%;
@@ -1349,6 +1363,9 @@ a.more {
                 @include screen('mobile') {
                     padding: 30px 30px 10px;
                 }
+                @include screen('xs_mobile'){
+                    padding: 30px 20px 10px;
+                }
             }
         }
     }
@@ -1453,6 +1470,9 @@ a.more {
                 background: linear-gradient(180deg, rgba(189, 231, 146, 1) 0%, rgba(152, 214, 135, 1) 100%);
                 padding: 2em 1.5em;
                 margin-bottom: 2em;
+                @include screen('xs_mobile'){
+                     padding: 2em 20px;
+                }
                 ul {
                     margin: 0;
                     padding: 0;

@@ -22,7 +22,7 @@ footer {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     a {

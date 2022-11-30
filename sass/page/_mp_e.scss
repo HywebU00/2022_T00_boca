@@ -150,6 +150,9 @@ a.more {
         margin: 0em 2em 2em;
         left: 0;
     }
+    @include screen('xs_mobile'){
+        margin: 0em 20px 2em;
+    }
     .sidebar_list {
         margin-bottom: 5px;
         display: block;
@@ -580,6 +583,9 @@ a.more {
         @include screen('mobile') {
             padding: 30px 30px 30px;
         }
+        @include screen('xs_mobile'){
+             padding: 30px 20px 30px;
+        }
         ul {
             @include li-reset;
             font-size: 1.188em;
@@ -711,6 +717,9 @@ a.more {
                 flex-basis: 44%;
                 margin-bottom: 1em;
             }
+            @include screen('xs_mobile'){
+                flex-basis: 100%;
+            }
             .title {
                 text-align: center;
                 padding: .5em 0;
@@ -762,6 +771,9 @@ a.more {
             @include screen('tablet') {
                 flex-basis: 54%;
                 margin-bottom: 1em;
+            }
+             @include screen('xs_mobile'){
+                flex-basis: 100%;
             }
             .title {
                 text-align: center;
@@ -961,12 +973,18 @@ a.more {
             .content {
                 padding: 2em;
                 box-sizing: border-box;
+                @include screen('xs_mobile'){
+                    padding: 1.5em 20px;
+                }
             }
             ul {
                 margin: 0 0 1em;
                 padding: 0;
                 list-style-type: none;
                 font-size: 1.188em;
+                @include screen('xs_mobile'){
+                    margin: 0 0 .5em;
+                }
                 li {
                     margin-bottom: 5px;
                     a {
@@ -1123,6 +1141,9 @@ a.more {
         @include screen('tablet') {
             flex-wrap: wrap;
         }
+        @include screen('xs_mobile'){
+             padding: 2em 20px 1em;
+        }
         .documentary_block {
             flex: 0 0 80%;
             flex-basis: 80%;
@@ -1154,6 +1175,9 @@ a.more {
                             flex: 0 0 100%;
                             flex-basis: 100%;
                             margin: 0 0 1em;
+                        }
+                        @include screen('xs_mobile'){
+                            margin: 0 0 .5em;
                         }
                         a {
                             padding: 1.5em 1em 1.5em 2em;
