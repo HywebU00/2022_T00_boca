@@ -91,7 +91,7 @@ body {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     h2.title {
@@ -168,4 +168,11 @@ body {
     flex: 0 0 auto;
     flex-basis: 24px;
     
+}
+// font color
+.wordred{
+    color:$color-red;
+}
+.wordgreen{
+    color:$color-green;
 }

@@ -107,6 +107,7 @@ $menuItems: 15;
                         min-height: 2em;
                         line-height: 2em;
                         border-bottom: 1px solid rgba(255, 255, 255, 1);
+                        white-space: normal;
                     }
                     &.hasChild {
                         >a {

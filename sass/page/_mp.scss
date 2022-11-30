@@ -459,6 +459,7 @@ a.more {
                     color: $color-word;
                     text-align: center;
                     font-size: 1.25em;
+                    @include text-overflow;
                 }
                 &:focus {
                     &:before {
@@ -500,7 +501,8 @@ a.more {
                 background-size: 60px 60px;
                 width: 60px;
                 height: 60px;
-                left: -20px
+                left: -20px;
+                top: 25%;
             }
         }
         .slick-next {
@@ -519,6 +521,7 @@ a.more {
                 width: 60px;
                 height: 60px;
                 right: -20px;
+                top: 25%;
             }
         }
     }
@@ -531,13 +534,16 @@ a.more {
     background-repeat: no-repeat;
     background-position: center bottom;
     position: relative;
+    @include screen('xs_mobile'){
+         padding: 50px 0 70px;
+    }
     .container {
         @include gutter(200px);
         @include screen('mobile') {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     @include screen('mobile') {
@@ -631,13 +637,16 @@ a.more {
     @include screen('tablet') {
         padding: 75px 0 100px
     }
+    @include screen('xs_mobile'){
+         padding: 50px 0 70px;
+    }
     .container {
         @include gutter(200px);
         @include screen('mobile') {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .more {
@@ -737,7 +746,6 @@ a.more {
                     }
                 }
             }
-           
             .alert_nation_list {
                 ul {
                     margin: 20px 20px 40px;
@@ -870,6 +878,9 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
+    @include screen('xs_mobile'){
+         padding: 120px 0 50px;
+    }
     &:after {
         content: '';
         background-image: url('../images/passport_bg.png');
@@ -896,12 +907,12 @@ a.more {
             height: 437px;
         }
         @include screen('xs_mobile') {
-            width: 450px;
+            width: 400px;
             height: 357px;
             top: -88px;
         }
         @media(max-width: 480px) {
-            width: 400px;
+            width: 300px;
             height: 318px;
             top: -60px;
         }
@@ -913,7 +924,7 @@ a.more {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .apply_passport_group {
@@ -929,6 +940,9 @@ a.more {
     background-image: url('../images/people_exchanges_bg.png');
     background-repeat: no-repeat;
     background-position: center top;
+    @include screen('xs_mobile'){
+         padding: 50px 0 50px;
+    }
     .container {
         @include gutter(200px);
         position: relative;
@@ -936,7 +950,7 @@ a.more {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .people_exchanges_group {
@@ -1095,6 +1109,9 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
+    @include screen('xs_mobile'){
+         padding: 50px 0 50px;
+    }
     .container {
         @include gutter(200px);
         position: relative;
@@ -1102,7 +1119,7 @@ a.more {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .pigeon_04 {
@@ -1303,6 +1320,9 @@ a.more {
     background-image: url('../images/public_use_block_bg.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
+    @include screen('xs_mobile'){
+         padding: 50px 0 50px;
+    }
     .container {
         @include gutter(200px);
         position: relative;
@@ -1310,13 +1330,16 @@ a.more {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .public_use_group {
         // 影音專區
         .video_block {
             margin-bottom: 5em;
+            @include screen('xs_mobile'){
+                margin-bottom: 3em;
+            }
             .video_group {
                 padding: 30px 50px 10px;
                 box-sizing: border-box;
@@ -1438,17 +1461,11 @@ a.more {
                     li {
                         border-bottom: none;
                         margin-bottom: 0.7em;
-                        @media(max-width: 1200px) {
-                            margin-bottom: 0em;
-                        }
-                        @include screen('tablet') {
-                            margin-bottom: 0.3em;
-                        }
                         &:last-child {
                             margin-bottom: 0;
                         }
                         a {
-                            padding: .4em 0 .4em 1em;
+                            padding: .2em 0 .2em 1em;
                             position: relative;
                             color: $color-word;
                             display: block;
@@ -1496,7 +1513,7 @@ a.more {
             @include gutter(100px);
         }
         @include screen('xs_mobile') {
-            @include gutter(60px);
+            @include gutter(40px);
         }
     }
     .adSlider {

@@ -162,6 +162,11 @@
             text-decoration: none;
             background-color:#eee;
             border-radius:5px;
+            margin:0 3px;
+            display:inline-block;
+            &:last-child{
+                margin:0 10px 0 3px;
+            }
             &:hover{
                 background-color:$primaryColor;
                 color:#fff;
