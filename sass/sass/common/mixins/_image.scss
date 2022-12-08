@@ -4,11 +4,9 @@
 //   max-width: 100%; // Part 1: Set a maximum relative to the parent
 //   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 // }
-
-img{
+img {
     max-width: 100%;
 }
-
 //https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
 @mixin aspect-ratio($width, $height) {
     overflow: hidden;
@@ -29,11 +27,8 @@ img{
         margin: auto;
     }
 }
-
 // 範例
 // @include aspect-ratio(4,3);                   // 圖片比例，4:3
-
-
 // 圖片列表mixin
 // @mixin make_col($pic_length,$m_pic_length) {
 //     $outer_W: 100%;
@@ -64,4 +59,3 @@ img{
 //         left: 0;
 //     }
 // }
-

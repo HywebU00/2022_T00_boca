@@ -150,7 +150,7 @@ a.more {
         margin: 0em 2em 2em;
         left: 0;
     }
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         margin: 0em 20px 2em;
     }
     .sidebar_list {
@@ -456,6 +456,9 @@ a.more {
                     position: relative;
                     margin-bottom: 20px;
                     @include aspect-ratio(6, 2.7);
+                    img {
+                        object-fit: fill;
+                    }
                 }
                 .caption {
                     position: relative;
@@ -537,8 +540,8 @@ a.more {
     background-repeat: no-repeat;
     background-position: center bottom;
     position: relative;
-    @include screen('xs_mobile'){
-         padding: 50px 0 70px;
+    @include screen('xs_mobile') {
+        padding: 50px 0 70px;
     }
     .container {
         @include gutter(200px);
@@ -570,7 +573,7 @@ a.more {
         @include screen('mobile') {
             padding: 30px 30px 30px;
         }
-        @include screen('xs_mobile'){
+        @include screen('xs_mobile') {
             padding: 30px 20px 30px;
         }
     }
@@ -643,8 +646,8 @@ a.more {
     @include screen('tablet') {
         padding: 75px 0 100px
     }
-    @include screen('xs_mobile'){
-         padding: 50px 0 70px;
+    @include screen('xs_mobile') {
+        padding: 50px 0 70px;
     }
     .container {
         @include gutter(200px);
@@ -697,7 +700,7 @@ a.more {
                 border-radius: 15px;
                 padding: 30px;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     padding: 30px 20px;
                 }
                 ul {
@@ -887,8 +890,8 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
-    @include screen('xs_mobile'){
-         padding: 120px 0 50px;
+    @include screen('xs_mobile') {
+        padding: 120px 0 50px;
     }
     &:after {
         content: '';
@@ -949,8 +952,8 @@ a.more {
     background-image: url('../images/people_exchanges_bg.png');
     background-repeat: no-repeat;
     background-position: center top;
-    @include screen('xs_mobile'){
-         padding: 50px 0 50px;
+    @include screen('xs_mobile') {
+        padding: 50px 0 50px;
     }
     .container {
         @include gutter(200px);
@@ -1120,8 +1123,8 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
-    @include screen('xs_mobile'){
-         padding: 50px 0 50px;
+    @include screen('xs_mobile') {
+        padding: 50px 0 50px;
     }
     .container {
         @include gutter(200px);
@@ -1208,8 +1211,8 @@ a.more {
         @include screen('tablet') {
             flex-wrap: wrap;
         }
-        @include screen('xs_mobile'){
-             padding: 2.5em 20px 0.5em;
+        @include screen('xs_mobile') {
+            padding: 2.5em 20px 0.5em;
         }
         .directions {
             flex: 0 0 29%;
@@ -1334,8 +1337,8 @@ a.more {
     background-image: url('../images/public_use_block_bg.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
-    @include screen('xs_mobile'){
-         padding: 50px 0 50px;
+    @include screen('xs_mobile') {
+        padding: 50px 0 50px;
     }
     .container {
         @include gutter(200px);
@@ -1351,7 +1354,7 @@ a.more {
         // 影音專區
         .video_block {
             margin-bottom: 5em;
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 margin-bottom: 3em;
             }
             .video_group {
@@ -1363,7 +1366,7 @@ a.more {
                 @include screen('mobile') {
                     padding: 30px 30px 10px;
                 }
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     padding: 30px 20px 10px;
                 }
             }
@@ -1470,8 +1473,8 @@ a.more {
                 background: linear-gradient(180deg, rgba(189, 231, 146, 1) 0%, rgba(152, 214, 135, 1) 100%);
                 padding: 2em 1.5em;
                 margin-bottom: 2em;
-                @include screen('xs_mobile'){
-                     padding: 2em 20px;
+                @include screen('xs_mobile') {
+                    padding: 2em 20px;
                 }
                 ul {
                     margin: 0;

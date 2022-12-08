@@ -150,7 +150,7 @@ a.more {
         margin: 0em 2em 2em;
         left: 0;
     }
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         margin: 0em 20px 2em;
     }
     .sidebar_list {
@@ -456,6 +456,9 @@ a.more {
                     position: relative;
                     margin-bottom: 20px;
                     @include aspect-ratio(6, 2.7);
+                    img {
+                        object-fit: fill;
+                    }
                 }
                 .caption {
                     position: relative;
@@ -537,7 +540,7 @@ a.more {
     background-repeat: no-repeat;
     background-position: center bottom;
     position: relative;
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         padding: 50px 0 70px;
     }
     .container {
@@ -583,8 +586,8 @@ a.more {
         @include screen('mobile') {
             padding: 30px 30px 30px;
         }
-        @include screen('xs_mobile'){
-             padding: 30px 20px 30px;
+        @include screen('xs_mobile') {
+            padding: 30px 20px 30px;
         }
         ul {
             @include li-reset;
@@ -684,8 +687,8 @@ a.more {
     background-image: url('../images/people_exchanges_bg.png');
     background-repeat: no-repeat;
     background-position: center top;
-     @include screen('xs_mobile'){
-        padding: 50px 0 ;
+    @include screen('xs_mobile') {
+        padding: 50px 0;
     }
     .container {
         @include gutter(200px);
@@ -717,7 +720,7 @@ a.more {
                 flex-basis: 44%;
                 margin-bottom: 1em;
             }
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 flex-basis: 100%;
             }
             .title {
@@ -772,7 +775,7 @@ a.more {
                 flex-basis: 54%;
                 margin-bottom: 1em;
             }
-             @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 flex-basis: 100%;
             }
             .title {
@@ -900,7 +903,7 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
-     @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         padding: 50px 0 60px;
     }
     &:after {
@@ -973,7 +976,7 @@ a.more {
             .content {
                 padding: 2em;
                 box-sizing: border-box;
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     padding: 1.5em 20px;
                 }
             }
@@ -982,7 +985,7 @@ a.more {
                 padding: 0;
                 list-style-type: none;
                 font-size: 1.188em;
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     margin: 0 0 .5em;
                 }
                 li {
@@ -1052,7 +1055,7 @@ a.more {
     background-repeat: no-repeat;
     background-position: center top;
     position: relative;
-     @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         padding: 50px 0 60px;
     }
     .container {
@@ -1141,8 +1144,8 @@ a.more {
         @include screen('tablet') {
             flex-wrap: wrap;
         }
-        @include screen('xs_mobile'){
-             padding: 2em 20px 1em;
+        @include screen('xs_mobile') {
+            padding: 2em 20px 1em;
         }
         .documentary_block {
             flex: 0 0 80%;
@@ -1176,7 +1179,7 @@ a.more {
                             flex-basis: 100%;
                             margin: 0 0 1em;
                         }
-                        @include screen('xs_mobile'){
+                        @include screen('xs_mobile') {
                             margin: 0 0 .5em;
                         }
                         a {
@@ -1216,7 +1219,7 @@ a.more {
     // background-image:url('../images/documentary_proof_bg.jpg');
     background-repeat: no-repeat;
     background-position: center top;
-     @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         padding: 50px 0 70px;
     }
     .container {

@@ -44,18 +44,18 @@ table {
                 text-align: left;
             }
         }
-        button{
-            margin:0;
-            &.btn{
-                margin:0;
-                padding:0.1em 1.25em;
+        button {
+            margin: 0;
+            &.btn {
+                margin: 0;
+                padding: 0.1em 1.25em;
             }
         }
     }
-    th{
-        &.num{
+    th {
+        &.num {
             color: #fff;
-        } 
+        }
     }
     td {
         border: #ddd 1px solid;
@@ -66,8 +66,6 @@ table {
         .square {
             @extend %alert_color;
             vertical-align: middle;
-            
-            
             &.redblock {
                 background-color: #e60012;
             }
@@ -81,8 +79,8 @@ table {
                 background-color: #959595;
             }
         }
-        .date{
-            color:$color-red;
+        .date {
+            color: $color-red;
         }
     }
     th {
@@ -91,12 +89,11 @@ table {
         border: #DDD 1px solid;
         text-align: center;
         // white-space: nowrap;
-        a{
-            color:#fff!important;
-            text-decoration: underline!important;
-            &:hover{
-
-                text-decoration:none!important;
+        a {
+            color: #fff !important;
+            text-decoration: underline !important;
+            &:hover {
+                text-decoration: none !important;
             }
         }
     }
@@ -111,6 +108,11 @@ table {
     &.table_sprite {
         tr:nth-child(even) {
             background: #F5F5F5;
+        }
+    }
+    &.noborder {
+        th, td {
+            border: none;
         }
     }
 }
