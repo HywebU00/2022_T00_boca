@@ -284,3 +284,7 @@ $(function(){
         
     });
 })
+
+// keywordideas 錨點
+
+function keywordideasClick(id) { if ($("#" + id).length > 0) { $("html, body").animate({ scrollTop: $("#" + id).offset().top - 140 }, 600); } }
