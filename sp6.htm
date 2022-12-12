@@ -241,8 +241,10 @@
                                 <!-- 右 -->
                                 <div class="warning_rightblock">
                                     <!-- 世界地圖 start -->
-                                    <div class="world_map_group">
+                                    <!-- <div class="world_map_group">
                                         <img src="images/world_map.jpg" alt="世界地圖示警圖">
+                                    </div> -->
+                                    <div class="world_map_group" id="worldMap">
                                     </div>
                                     <!-- 世界地圖 end -->
                                 </div>
@@ -347,7 +349,6 @@
                                             <td>阿拉伯聯合大公國 United Arab Emirates</td>
                                             <td><span class="square redblock">紅色方塊</span>紅色警示-不宜前往，宜儘速離境</td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -378,7 +379,6 @@
                                             <td>阿拉伯聯合大公國 United Arab Emirates</td>
                                             <td><span class="square redblock">紅色方塊</span>紅色警示-不宜前往，宜儘速離境</td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -409,7 +409,6 @@
                                             <td>阿拉伯聯合大公國 United Arab Emirates</td>
                                             <td><span class="square redblock">紅色方塊</span>紅色警示-不宜前往，宜儘速離境</td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -440,7 +439,6 @@
                                             <td>阿拉伯聯合大公國 United Arab Emirates</td>
                                             <td><span class="square redblock">紅色方塊</span>紅色警示-不宜前往，宜儘速離境</td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -471,7 +469,6 @@
                                             <td>阿拉伯聯合大公國 United Arab Emirates</td>
                                             <td><span class="square redblock">紅色方塊</span>紅色警示-不宜前往，宜儘速離境</td>
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -657,6 +654,65 @@
     <script src="js/wow.min.js"></script>
     <script>
     new WOW().init();
+    </script>
+    <script src="Scripts/DataMaps/d3.min.js"></script>
+    <script src="Scripts/DataMaps/topojson.js"></script>
+    <script src="Scripts/DataMaps/datamaps.world.min.js"></script>
+    <script>
+    function escapeRegExp(str) {
+        return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    }
+
+    function replaceAll(str, find, replace) {
+        return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+    }
+
+    function categoryClick(id) {
+        if ($("#" + id).length > 0) {
+            $("html, body").animate({ scrollTop: $("#" + id).offset().top - 10 }, 600);
+        }
+    }
+    var map = new Datamap({
+        element: document.getElementById('worldMap'),
+        geographyConfig: {
+            //highlightFillColor: '#ac7ee0',
+            //highlightBorderColor: '#875eb0',
+            //highlightFillColor: '#937ee0',
+            //highlightBorderColor: '#725eb0',
+            highlightFillColor: '#d37ee0',
+            highlightBorderColor: '#a75eb0',
+            highlightBorderWidth: 1,
+            highlightBorderOpacity: 1,
+            //highlightFillColor: '#ce7ee3',
+            popupTemplate: function(geo, data) {
+                return ['<div class="hoverinfo"><strong style="color:black;font-weight:bold;">',
+                    geo.properties.CNname + ' ' + geo.properties.ENname, '</strong></div>'
+                ].join('');
+            }
+        },
+        done: function(datamap) {
+            datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+                var country = replaceAll(geography.properties.name, " ", "_");
+                console.log(country);
+                console.log($("#" + country));
+                console.log($("#" + country).val());
+                console.log($("#" + country).length);
+                if ($("#" + country).length > 0) {
+                    $("html, body").animate({ scrollTop: $("#" + country).offset().top - 10 }, 600);
+                } else {
+                    alert("您所查詢的國家/地區未發布相關燈號警示");
+                }
+            });
+        }
+    });
+    $(function() {
+        $("#Query").click(function() {
+            if ($(this).val() == "請輸入國家地區名稱") { $(this).val(""); }
+        });
+        $("#BTNSubmit").click(function() {
+            if ($("#Query").val() == "請輸入國家地區名稱") { $("#Query").val(""); }
+        });
+    });
     </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

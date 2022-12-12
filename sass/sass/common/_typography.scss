@@ -72,4 +72,19 @@
             clear: both;
         }
     }
+    .remark_block, .directions_list_block{
+        font-size: 1em;
+        p{
+            font-size: 1.125em;
+        }
+    }
+    .category{
+        ul{
+            li{
+                a{
+                    line-height: 1.5em;
+                }
+            }
+        }
+    }
 }

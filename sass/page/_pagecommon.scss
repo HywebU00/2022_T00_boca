@@ -16,8 +16,8 @@ h3.title {
     background-repeat: no-repeat;
     background-position: 1em 1em;
     margin: 10px 0 30px;
-    font-size: 1.188em;
-    line-height: 1.7em;
+    font-size: 1.125em;
+    line-height: 1.85em;
     box-sizing: border-box;
     position: relative;
     @include screen('mobile') {
@@ -1077,6 +1077,7 @@ h3.title {
                 }
                 @include screen('mobile') {
                     flex-basis: 100%;
+                    margin-bottom: 20px;
                 }
                 ul {
                     margin: 0;
@@ -1128,9 +1129,14 @@ h3.title {
             @media(max-width: 1200px) {
                 flex-basis: 100%;
             }
+            @include screen('mobile') {
+                display: none;
+            }
             .world_map_group {
                 width: 100%;
                 text-align: center;
+                min-height: 380px;
+                margin: 0 0 20px;
             }
         }
     }
@@ -1326,22 +1332,21 @@ h3.title {
             min-height: 980px;
             @include screen('xs_mobile') {
                 background-position: center 300px;
-                min-height:1075px;
+                min-height: 1075px;
                 background-size: 140%;
             }
             @media(max-width: 500px) {
                 background-position: center 300px;
-                min-height:1000px;
+                min-height: 1000px;
             }
             @media(max-width: 450px) {
-                 background-position: center 400px;
-               
+                background-position: center 400px;
             }
             @media(max-width: 400px) {
                 background-position: center 450px;
                 min-height: 970px;
             }
-             @media(max-width: 350px) {
+            @media(max-width: 350px) {
                 background-position: center 450px;
                 min-height: 900px;
             }
@@ -1704,8 +1709,6 @@ h3.title {
     //     top:-120px;
     //     }
     // }
-    
-    
     .keyword_ideas_group {
         background-color: #f2f2f2;
         padding: 2em;
@@ -1734,7 +1737,6 @@ h3.title {
                     background-color: #fff;
                     color: $color-word;
                     border-radius: 5px;
-                    
                     &:hover {
                         color: #fff;
                         background-color: $primaryColor;
