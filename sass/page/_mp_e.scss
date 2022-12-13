@@ -899,9 +899,9 @@ a.more {
 .apply_passport_block {
     background-color: #bfe792;
     padding: 60px 0 60px;
-    background-image: url('../images/apply_passport_bg_e.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
+    // background-image: url('../images/apply_passport_bg_e.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center top;
     position: relative;
     @include screen('xs_mobile') {
         padding: 50px 0 60px;
