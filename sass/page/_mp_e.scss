@@ -632,7 +632,7 @@ a.more {
         animation-duration: 15s;
         animation-iteration-count: infinite;
         animation-direction: normal;
-        z-index: 0;
+         z-index: 1;
         @include screen('mobile') {
             animation-name: pigeon02;
             top: 0px;
