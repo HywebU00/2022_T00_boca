@@ -6,7 +6,7 @@ a.more {
     width: 10em;
     text-align: center;
     height: 2.5em;
-    margin: .5em auto .5em;
+    margin: 0.5em auto 0.5em;
     line-height: 2.5;
     color: $primaryColor;
     border: 1px solid $primaryColor;
@@ -22,20 +22,20 @@ a.more {
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
     &:after {
-        content: "";
+        content: '';
         width: 12px;
         height: 12px;
-        border: 2px solid #FFF;
+        border: 2px solid #fff;
         transform: rotate(45deg);
         position: absolute;
         right: -10px;
         top: 14px;
         border-left: none;
         border-bottom: none;
-        transition: .3s ease-out;
+        transition: 0.3s ease-out;
     }
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: -1;
         top: 0;
@@ -65,6 +65,7 @@ a.more {
         }
     }
 }
+
 .more {
     display: flex;
     justify-content: center;
@@ -82,7 +83,7 @@ a.more {
         z-index: 1;
         font-weight: bolder;
         font-size: 1.125em;
-        transition: .5s;
+        transition: 0.5s;
         &:before {
             content: '';
             width: calc(100% - 4px);
@@ -95,7 +96,7 @@ a.more {
             left: 2px;
             border-radius: 50px;
             z-index: -1;
-            transition: .5s;
+            transition: 0.5s;
         }
         &:after {
             content: '';
@@ -107,7 +108,7 @@ a.more {
             position: absolute;
             right: 1em;
             top: 1em;
-            transition: .5s;
+            transition: 0.5s;
         }
         &:hover {
             color: $aHover;
@@ -122,6 +123,7 @@ a.more {
         }
     }
 }
+
 // 範例：
 // .demosection {
 //     [class^="col"] {
@@ -135,7 +137,7 @@ a.more {
     left: calc(50vw - 700px);
     top: 40%;
     z-index: 10;
-    @media(max-width: 1400px) {
+    @media (max-width: 1400px) {
         left: 10px;
     }
     @include screen('tablet') {
@@ -162,10 +164,10 @@ a.more {
             max-width: 48%;
             margin: 0 1% 1em;
         }
-        @media(max-width: 500px) {
+        @media (max-width: 500px) {
             flex: 0 0 100%;
             max-width: 100%;
-            margin: 0 0 .5em;
+            margin: 0 0 0.5em;
         }
         >div {
             a {
@@ -181,7 +183,7 @@ a.more {
                 border-radius: 50px;
                 box-sizing: border-box;
                 font-size: 1.25em;
-                transition: .5s;
+                transition: 0.5s;
                 @include screen('mobile') {
                     width: 100%;
                 }
@@ -198,12 +200,13 @@ a.more {
                         @include text-overflow;
                     }
                 }
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     width: auto;
                     span {
                         display: block;
                         animation-name: titletranslate;
-                        animation-duration: .5s;
+                        animation-duration: 0.5s;
                         margin-right: 20px;
                     }
                     @keyframes titletranslate {
@@ -230,12 +233,12 @@ a.more {
             }
             &.contact {
                 a {
-                    background-color: #E77605;
+                    background-color: #e77605;
                 }
             }
             &.document {
                 a {
-                    background-color: #6D97CF;
+                    background-color: #6d97cf;
                 }
             }
             &.news {
@@ -250,19 +253,20 @@ a.more {
             }
             &.picture {
                 a {
-                    background-color: #D6749E;
+                    background-color: #d6749e;
                 }
             }
         }
     }
 }
+
 // 分享快捷列
 .fixed_share_group_right {
     position: fixed;
     right: calc(50vw - 700px);
     top: 40%;
     z-index: 10;
-    @media(max-width: 1400px) {
+    @media (max-width: 1400px) {
         right: 10px;
     }
     @include screen('tablet') {
@@ -383,7 +387,7 @@ a.more {
                         order: 1;
                         display: block;
                         animation-name: titletranslate2;
-                        animation-duration: .5s;
+                        animation-duration: 0.5s;
                         margin-left: 20px;
                         margin-right: 0;
                     }
@@ -402,7 +406,7 @@ a.more {
             }
             &.line {
                 a {
-                    background-color: #32AA49;
+                    background-color: #32aa49;
                 }
             }
             &.app {
@@ -412,7 +416,7 @@ a.more {
             }
             &.mail {
                 a {
-                    background-color: #E87400;
+                    background-color: #e87400;
                 }
             }
             &.Youtube {
@@ -423,24 +427,26 @@ a.more {
             &.flickr {
                 a {
                     background-color: #e5e5e5;
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         color: $color-word;
                     }
                 }
             }
             &.rss {
                 a {
-                    background-color: #E67619;
+                    background-color: #e67619;
                 }
             }
         }
     }
 }
+
 // 大圖區塊
 .bigpicture_slider_block {
     position: relative;
     padding: 50px 0 80px;
-    // 首頁大圖輪播 
+    // 首頁大圖輪播
     .bigpicture_Slider {
         width: 75%;
         margin: 0 auto;
@@ -455,7 +461,8 @@ a.more {
                     padding: 0;
                     position: relative;
                     margin-bottom: 20px;
-                    @include aspect-ratio(6, 2.7);
+                    @include aspect-ratio(6,
+                    2.7);
                     img {
                         object-fit: fill;
                     }
@@ -469,7 +476,7 @@ a.more {
                 }
                 &:focus {
                     &:before {
-                        content: "";
+                        content: '';
                         position: absolute;
                         z-index: 2;
                         width: 100%;
@@ -532,6 +539,7 @@ a.more {
         }
     }
 }
+
 // 最新消息
 .news_block {
     background-color: #b0d9ef;
@@ -554,12 +562,12 @@ a.more {
     }
     @include screen('mobile') {
         h2.title {
-            margin-bottom: 50px
+            margin-bottom: 50px;
         }
     }
     @include screen('xs_mobile') {
         h2.title {
-            margin-bottom: 70px
+            margin-bottom: 70px;
         }
     }
     .tabSet {
@@ -608,10 +616,10 @@ a.more {
                         margin-left: -8em;
                     }
                     @include screen('xs_mobile') {
-                        padding: .6em 0;
+                        padding: 0.6em 0;
                         .date {
                             display: block;
-                            margin-bottom: .5em;
+                            margin-bottom: 0.5em;
                             margin-left: 0;
                         }
                         white-space: normal;
@@ -632,7 +640,7 @@ a.more {
         animation-duration: 15s;
         animation-iteration-count: infinite;
         animation-direction: normal;
-         z-index: 1;
+        z-index: 1;
         @include screen('mobile') {
             animation-name: pigeon02;
             top: 0px;
@@ -679,6 +687,7 @@ a.more {
         }
     }
 }
+
 // 國人旅外及外籍人士來臺資訊
 .visa_block {
     display: block;
@@ -714,7 +723,7 @@ a.more {
             background: linear-gradient(180deg, rgba(215, 251, 181, 1) 0%, rgba(127, 207, 107, 1) 100%);
             color: $color-word;
             border-top: 3px solid #88d372;
-            padding: .5em 1em;
+            padding: 0.5em 1em;
             box-sizing: border-box;
             @include screen('tablet') {
                 flex-basis: 44%;
@@ -725,7 +734,7 @@ a.more {
             }
             .title {
                 text-align: center;
-                padding: .5em 0;
+                padding: 0.5em 0;
                 color: $color-word;
                 border-bottom: 2px solid #fff;
                 font-size: 1.25em;
@@ -739,7 +748,7 @@ a.more {
                     margin-bottom: 1em;
                     font-size: 1.188em;
                     a {
-                        padding: .2em 0 .2em 0em;
+                        padding: 0.2em 0 0.2em 0em;
                         position: relative;
                         color: $color-word;
                         font-weight: bold;
@@ -754,7 +763,7 @@ a.more {
                             border-left: none;
                             position: absolute;
                             left: -1em;
-                            top: .7em;
+                            top: 0.7em;
                         }
                         &:hover {
                             color: darken($aHover, 10);
@@ -769,7 +778,7 @@ a.more {
             background: rgb(226, 243, 253);
             background: linear-gradient(180deg, rgba(226, 243, 253, 1) 0%, rgba(112, 187, 243, 1) 100%);
             border-top: 3px solid #72bcf3;
-            padding: .5em 1em;
+            padding: 0.5em 1em;
             box-sizing: border-box;
             @include screen('tablet') {
                 flex-basis: 54%;
@@ -780,7 +789,7 @@ a.more {
             }
             .title {
                 text-align: center;
-                padding: .5em 0;
+                padding: 0.5em 0;
                 color: $color-word;
                 border-bottom: 2px solid #fff;
                 font-size: 1.25em;
@@ -802,7 +811,7 @@ a.more {
                         flex-basis: 100%;
                     }
                     a {
-                        padding: .2em 0 .2em 0em;
+                        padding: 0.2em 0 0.2em 0em;
                         position: relative;
                         color: $color-word;
                         font-weight: bold;
@@ -827,9 +836,9 @@ a.more {
             border: none;
             background: rgb(255, 118, 99);
             background: linear-gradient(135deg, rgba(255, 118, 99, 1) 0%, rgba(251, 185, 79, 1) 53%);
-            padding: .5em 1em;
+            padding: 0.5em 1em;
             position: relative;
-            transition: .5s;
+            transition: 0.5s;
             @include screen('tablet') {
                 flex-basis: 100%;
             }
@@ -843,7 +852,7 @@ a.more {
                 position: absolute;
                 bottom: 1.5em;
                 right: 2em;
-                transition: .5s;
+                transition: 0.5s;
             }
             a {
                 display: block;
@@ -856,7 +865,7 @@ a.more {
                 height: 100%;
                 padding: 1em 1em 1.5em;
                 color: #762f00;
-                @media(max-width: 1200px) {
+                @media (max-width: 1200px) {
                     padding: 1em 1em 2em;
                 }
                 .title {
@@ -895,6 +904,7 @@ a.more {
         }
     }
 }
+
 // 申辦護照
 .apply_passport_block {
     background-color: #bfe792;
@@ -918,11 +928,11 @@ a.more {
         right: 0;
         top: -140px;
         z-index: 0;
-        transition: .5s;
-        @media(max-width: 1400px) {
+        transition: 0.5s;
+        @media (max-width: 1400px) {
             right: -10%;
         }
-        @media(max-width: 1200px) {
+        @media (max-width: 1200px) {
             right: -20%;
         }
         @include screen('tablet') {
@@ -953,7 +963,8 @@ a.more {
         @include screen('mobile') {
             flex-wrap: wrap;
         }
-        .taiwan_block, .abroad_block {
+        .taiwan_block,
+        .abroad_block {
             flex: 0 0 auto;
             flex-basis: 49%;
             background-color: #f0f2f3;
@@ -986,7 +997,7 @@ a.more {
                 list-style-type: none;
                 font-size: 1.188em;
                 @include screen('xs_mobile') {
-                    margin: 0 0 .5em;
+                    margin: 0 0 0.5em;
                 }
                 li {
                     margin-bottom: 5px;
@@ -1007,7 +1018,7 @@ a.more {
                             border-bottom: none;
                             border-left: none;
                             position: absolute;
-                            left: .8em;
+                            left: 0.8em;
                             top: 1.5em;
                         }
                         &:hover {
@@ -1046,10 +1057,11 @@ a.more {
         }
     }
 }
+
 // 辦理文件證明
 .documentary_proof_block {
     display: block;
-    background-color: #aae4fb;
+    background-color: #f1f2f4;
     padding: 60px 0 60px;
     background-image: url('../images/documentary_proof_bg.jpg');
     background-repeat: no-repeat;
@@ -1083,10 +1095,10 @@ a.more {
             right: 5%;
             top: 40px;
         }
-        @media(max-width: 480px) {
+        @media (max-width: 480px) {
             right: -3%;
         }
-        @media(max-width: 380px) {
+        @media (max-width: 380px) {
             display: none;
         }
     }
@@ -1115,10 +1127,10 @@ a.more {
             top: -20px;
             bottom: auto;
         }
-        @media(max-width: 480px) {
+        @media (max-width: 480px) {
             left: -3%;
         }
-        @media(max-width: 380px) {
+        @media (max-width: 380px) {
             display: none;
         }
     }
@@ -1134,7 +1146,8 @@ a.more {
         }
     }
     .documentary_proof_group {
-        background-color: #f0f2f3;
+        background: rgb(169, 227, 250);
+    background: linear-gradient(119deg, rgba(169, 227, 250, 1) 32%, rgba(191, 231, 146, 1) 100%);
         padding: 2.5em 2em 1.5em;
         box-sizing: border-box;
         display: flex;
@@ -1167,7 +1180,7 @@ a.more {
                     display: flex;
                     flex-wrap: wrap;
                     li {
-                        margin-bottom: .5em;
+                        margin-bottom: 0.5em;
                         flex: 0 0 46%;
                         flex-basis: 46%;
                         margin: 0 2% 1.5em;
@@ -1180,7 +1193,7 @@ a.more {
                             margin: 0 0 1em;
                         }
                         @include screen('xs_mobile') {
-                            margin: 0 0 .5em;
+                            margin: 0 0 0.5em;
                         }
                         a {
                             padding: 1.5em 1em 1.5em 2em;
@@ -1198,7 +1211,7 @@ a.more {
                                 border-bottom: none;
                                 border-left: none;
                                 position: absolute;
-                                left: .8em;
+                                left: 0.8em;
                                 top: 2em;
                             }
                             &:hover {
@@ -1211,6 +1224,7 @@ a.more {
         }
     }
 }
+
 // ad_block
 .ad_block {
     display: block;
@@ -1250,7 +1264,7 @@ a.more {
             }
             &:focus {
                 &:before {
-                    content: "";
+                    content: '';
                     position: absolute;
                     z-index: 9;
                     width: 100%;

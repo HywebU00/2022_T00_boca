@@ -23,7 +23,7 @@
             height: 40px;
             margin: 2px;
             list-style: none;
-            flex:0 0 40px;
+            flex:0 0 auto;
 
             box-sizing: border-box;
             a {
@@ -162,11 +162,9 @@
             text-decoration: none;
             background-color:#eee;
             border-radius:5px;
-            margin:0 3px;
+            margin:0 5px;
             display:inline-block;
-            &:last-child{
-                margin:0 10px 0 3px;
-            }
+            
             &:hover{
                 background-color:$primaryColor;
                 color:#fff;

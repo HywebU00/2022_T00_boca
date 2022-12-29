@@ -19,13 +19,14 @@
         img {
             float: none;
             width: 100%;
-            margin: 0;
+            margin: 0 0 5px;
             display: block;
         }
         figcaption {
             text-align: center;
             display: block;
-            font-size: .938em;
+            font-size: 1.125em;
+            line-height: 1.85em;
         }
         @include screen('mobile') {
             float: none;
@@ -581,6 +582,11 @@
             }
             p {
                 display: inline-block;
+                line-height: 1.85em;
+                margin-bottom: 1em;
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
             .table_list {
                 margin: 0;
@@ -593,7 +599,10 @@
                 }
                 p {
                     font-size: 0.938em;
+                    margin-bottom: 0;
+                    
                 }
+
             }
         }
     }
@@ -611,6 +620,4 @@
         width: 100%;
         height: 100%;
     }
-    
-    
 }

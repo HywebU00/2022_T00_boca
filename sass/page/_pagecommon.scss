@@ -20,6 +20,9 @@ h3.title {
     line-height: 1.85em;
     box-sizing: border-box;
     position: relative;
+    strong{
+        color:$color-green;
+    }
     @include screen('mobile') {
         padding: 10px 20px;
         background-image: none;
@@ -276,6 +279,9 @@ h3.title {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 1.188em;
+    strong{
+        color:$color-green;
+    }
     ul {
         margin: 0;
         padding: 0;
