@@ -1387,11 +1387,14 @@ a.more {
         }
         // 資訊圖像化
         .infographics_block {
+            padding-right: 60px;
+            box-sizing: border-box;;
             @include screen('tablet') {
                 margin-bottom: 3em;
+                padding-right:0;
             }
             .infographics_Slider {
-                width: 90%;
+                width: 100%;
                 margin: 0;
                 @include gutter(0);
                 @include screen('tablet') {
