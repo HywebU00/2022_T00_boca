@@ -2624,7 +2624,7 @@
                 this.clear();
             }
         },
-        debug: false,
+        debug: true,
         allowInputToggle: false,
         disabledTimeIntervals: false,
         disabledHours: false,
