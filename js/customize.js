@@ -12,12 +12,12 @@ $(function() {
         $('.font_size ul').slideDown();
         $('.search_btnblock .search').slideUp();
     })
-    $('.font_size .fontselect').focus(function() {
-        $('.font_size ul').slideDown();
-    })
-    $('.font_size ul li:last-child button').focusout(function() {
-        $('.font_size ul').slideUp();
-    })
+    //$('.font_size .fontselect').focus(function() {
+    //    $('.font_size ul').slideDown();
+    //})
+    //$('.font_size ul li:last-child button').focusout(function() {
+    //    $('.font_size ul').slideUp();
+    //})
     // Search
     $('.search_btnblock .search_btn').click(function() {
         $('.search_btnblock .search').slideDown().addClass('addflex');
@@ -29,6 +29,9 @@ $(function() {
     $('.search_btnblock .search .keywordideas ul li:last-child>a').focusout(function() {
         $('.search_btnblock .search').slideUp();
     })
+
+    
+
     //sticky sidebar
     if ($('.stickySidebar').length > 0) {
         var stickySidebar = new StickySidebar('.stickySidebar', {

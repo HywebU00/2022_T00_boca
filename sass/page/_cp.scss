@@ -41,13 +41,21 @@
         background: #FFF;
         margin-bottom: 1em;
         font-size: 1.125em;
+        th{
+            line-height: 1.85em;
+        }
         td {
+                line-height: 1.85em;
             p {
                 padding: 0;
                 margin: 0;
                 font-size: 1em;
-                line-height: 1.5em;
+                // line-height: 1.5em;
             }
+        }
+        table{
+            font-size: 1em;
+            margin-bottom:0;
         }
     }
     img {

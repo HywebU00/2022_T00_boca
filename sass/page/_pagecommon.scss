@@ -352,7 +352,7 @@ h3.title {
         }
         .accept_leftblock {
             flex: 0 0 auto;
-            flex-basis: 30%;
+            flex-basis:23%;
             @include screen('tablet') {
                 flex-basis: 100%;
                 margin-bottom: 1em;
@@ -370,7 +370,7 @@ h3.title {
         }
         .accept_rightblock {
             flex: 0 0 auto;
-            flex-basis: 70%;
+            flex-basis: 77%;
             display: flex;
             // justify-content: space-between;
             @include screen('tablet') {
@@ -380,10 +380,10 @@ h3.title {
                 flex-wrap: wrap;
             }
             .accept_list {
-                flex: 0 0 auto;
-                flex-basis: 31%;
+                flex: 1 1 auto;
+                // flex-basis: 31%;
                 margin: 0 1.166%;
-                padding: 1.5em 1em;
+                padding: 1.5em .5em;
                 box-sizing: border-box;
                 background-color: #eee;
                 text-align: center;
@@ -407,10 +407,11 @@ h3.title {
                     }
                 }
                 .title {
-                    font-size: 1.438em;
+                    font-size: 1.313em;
                     font-weight: bolder;
                     margin-bottom: 1em;
                     color: #444;
+                    line-height: 1.5em;
                 }
                 .number {
                     font-size: 1.875em;
