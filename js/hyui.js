@@ -205,11 +205,11 @@ $(function() {
             // 副選單滑出
             liHasChild.on({
                 mouseenter: function() {
-                    $(this).children('ul').stop(true, false).fadeIn();
+                    $(this).children('ul').stop(true, false).fadeIn(200);
                 },
                 mouseleave: function() {
                     $(this).parent().siblings('ul').hide();
-                    $(this).children('ul').stop(true, false).fadeOut();
+                    $(this).children('ul').stop(true, false).fadeOut(200);
                 },
             });
             liHasChild.off('click');
@@ -217,24 +217,24 @@ $(function() {
             // 副選單滑出
             liHasChild2.on({
                 mouseenter: function() {
-                    $(this).children('ul').stop(true, false).fadeIn();
+                    $(this).children('ul').stop(true, false).fadeIn(200);
                 },
                 mouseleave: function() {
                     $(this).parent().siblings('ul').hide();
-                    $(this).children('ul').stop(true, false).fadeOut();
+                    $(this).children('ul').stop(true, false).fadeOut(200);
                 },
             });
             liHasChild2.off('click');
-            $('.megamenu').children('ul').children('li').children('ul').hide();
+            $('.megamenu').children('ul').children('li').children('ul').hide(200);
             // 傳統menu
             if (_menu.lenght > 0) {
                 liHasChild.on({
                     mouseenter: function() {
-                        $(this).children('ul').stop(true, false).fadeIn();
+                        $(this).children('ul').stop(true, false).fadeIn(200);
                     },
                     mouseleave: function() {
                         $(this).parent().siblings('ul').hide();
-                        $(this).children('ul').stop(true, false).fadeOut();
+                        $(this).children('ul').stop(true, false).fadeOut(200);
                     },
                 });
             }
@@ -242,11 +242,11 @@ $(function() {
             if (_megamenu.lenght > 0) {
                 liHasChild2.on({
                     mouseenter: function() {
-                        $(this).children('ul').stop(true, false).fadeIn();
+                        $(this).children('ul').stop(true, false).fadeIn(200);
                     },
                     mouseleave: function() {
                         $(this).parent().siblings('ul').hide();
-                        $(this).children('ul').stop(true, false).fadeOut();
+                        $(this).children('ul').stop(true, false).fadeOut(200);
                     },
                 });
             }
