@@ -16,7 +16,7 @@
         // font-size: 12pt;
         float: none;
         width: 100%;
-        @extend %no-bg;
+        // @extend %no-bg;
         -webkit-print-color-adjust: exact;
     }
     .container {
@@ -50,7 +50,7 @@
         float: none;
         // font-size: 12pt;
         @include clearfix;
-        @extend %no-bg;
+        // @extend %no-bg;
         padding-top: 0px !important;
         img {
             &.float_left {
@@ -67,8 +67,8 @@
         a:link,
         a:visited,
         a {
-            background: transparent;
-            color: #222;
+            // background: transparent;
+            // color: #222;
             font-weight: bold;
             text-decoration: underline;
             text-align: left;
@@ -90,7 +90,7 @@
             content: " ("attr(title) ")";
         }
         table {
-            background: #FFF;
+            // background: #FFF;
         }
         li {
             content: "» ";
@@ -119,8 +119,8 @@
     div:first-line,
     blockquote:first-line,
     li:first-line {
-        background: transparent !important;
-        color: #000 !important;
+        // background: transparent !important;
+        // color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
