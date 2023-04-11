@@ -41,21 +41,21 @@
         background: #FFF;
         margin-bottom: 1em;
         font-size: 1.125em;
-        th{
+        th {
             line-height: 1.85em;
         }
         td {
-                line-height: 1.85em;
+            line-height: 1.85em;
+            word-break: break-all;
             p {
                 padding: 0;
                 margin: 0;
                 font-size: 1em;
-                // line-height: 1.5em;
             }
         }
-        table, ol, ul{
+        table, ol, ul {
             font-size: 1em;
-            margin-bottom:0;
+            margin-bottom: 0;
         }
     }
     img {
@@ -592,7 +592,7 @@
                 display: inline-block;
                 line-height: 1.85em;
                 margin-bottom: 1em;
-                &:last-child{
+                &:last-child {
                     margin-bottom: 0;
                 }
             }
@@ -608,9 +608,7 @@
                 p {
                     font-size: 0.938em;
                     margin-bottom: 0;
-                    
                 }
-
             }
         }
     }
