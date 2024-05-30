@@ -46,7 +46,8 @@
     }
     td {
       line-height: 1.85em;
-      word-break: normal;
+      // word-break: normal;
+      word-break: break-word;
       p {
         padding: 0;
         margin: 0;
@@ -644,4 +645,8 @@
     width: 100%;
     height: 100%;
   }
+}
+a[href^="https://"]
+{
+  word-break: break-all;
 }
