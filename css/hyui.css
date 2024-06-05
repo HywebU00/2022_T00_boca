@@ -11432,7 +11432,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 
 .cp .pic {
   float: left;
-  margin: 0px 1em 1em 0;
+  margin: 0px 3em 1em 0;
   width: auto;
   width: 50%;
   max-width: 450px;
