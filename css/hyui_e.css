@@ -11102,6 +11102,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 1em;
   margin-bottom: 0;
 }
+.cp ol li,
+.cp ul li {
+  word-break: break-word;
+}
 .cp img.float_left {
   float: left;
   margin: 0px 1em 1em 0;
@@ -11141,6 +11145,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .cp p {
   font-size: 1.125em;
+  word-break: break-word;
 }
 
 .file_download {
