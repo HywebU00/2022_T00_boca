@@ -136,7 +136,7 @@
             transition: 0.5s;
             font-size: 1.125em;
             display: block;
-            @include text-overflow;
+            // @include text-overflow;
             position: relative;
             &:before {
               content: '';

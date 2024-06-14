@@ -3751,9 +3751,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   transition: 0.5s;
   font-size: 1.125em;
   display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   position: relative;
 }
 .menu ul li ul li a:before {
