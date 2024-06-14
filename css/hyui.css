@@ -3741,8 +3741,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul li {
   float: none;
   flex: 0 1 auto;
-  flex-basis: 18%;
-  max-width: 18%;
+  flex-basis: 23%;
+  max-width: 23%;
   margin: 0 1%;
 }
 .menu ul li ul li a {
