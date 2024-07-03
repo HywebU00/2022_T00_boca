@@ -12228,12 +12228,16 @@ a[href^="https://"] {
   }
 }
 .lightboxblock .title {
-  font-size: 1.5em;
+  font-size: 1.562em;
   padding-bottom: 0.5em;
   margin-bottom: 1em;
   border-bottom: 3px solid #1d75ce;
   font-weight: bold;
   color: #1d75ce;
+}
+.lightboxblock .content p {
+  font-size: 1.125em;
+  line-height: 1.7em;
 }
 .lightboxblock .fancybox-button {
   width: 60px;

@@ -671,7 +671,7 @@ a[href^="https://"]
     width: 100vw;
   }
   .title {
-    font-size: 1.5em;
+    font-size: 1.562em;
     padding-bottom: 0.5em;
     margin-bottom: 1em;
     border-bottom: 3px solid $primaryColor;
@@ -679,6 +679,10 @@ a[href^="https://"]
     color: $primaryColor;
   }
   .content {
+    p {
+      font-size: 1.125em;
+      line-height: 1.7em;
+    }
   }
   .fancybox-button {
     width: 60px;
