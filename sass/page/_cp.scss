@@ -659,3 +659,29 @@ a[href^="https://"]
 {
   word-break: break-all;
 }
+
+// 燈箱
+.lightboxblock {
+  display: none;
+  width: 600px;
+  @include screen('mobile') {
+    width: 80vw;
+  }
+  @include screen('xs_mobile') {
+    width: 100vw;
+  }
+  .title {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    border-bottom: 3px solid $primaryColor;
+    font-weight: bold;
+    color: $primaryColor;
+  }
+  .content {
+  }
+  .fancybox-button {
+    width: 60px;
+    height: 60px;
+  }
+}

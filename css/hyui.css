@@ -1489,7 +1489,7 @@ br {
 }
 
 .gs-webResult div.gs-visibleUrl {
-  color: #bfe792 !important;
+  color: hsl(88, 64%, 74%) !important;
 }
 
 .gsc-search-button.gsc-search-button-v2 {
@@ -7587,10 +7587,10 @@ table.noborder td {
 }
 
 .example-2 .tabItem:hover {
-  background: #bfe792;
+  background: hsl(88, 64%, 74%);
 }
 .example-2 .tabItem.active {
-  background: #bfe792;
+  background: hsl(88, 64%, 74%);
 }
 
 .active + .tabContent {
@@ -9401,7 +9401,7 @@ body.noscroll {
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    background: #FFF;
+    background: #fff;
     overflow-y: auto;
   }
 }
@@ -12211,6 +12211,33 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 
 a[href^="https://"] {
   word-break: break-all;
+}
+
+.lightboxblock {
+  display: none;
+  width: 600px;
+}
+@media screen and (max-width: 767px) {
+  .lightboxblock {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .lightboxblock {
+    width: 100vw;
+  }
+}
+.lightboxblock .title {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #1d75ce;
+  font-weight: bold;
+  color: #1d75ce;
+}
+.lightboxblock .fancybox-button {
+  width: 60px;
+  height: 60px;
 }
 
 /* sitemap */

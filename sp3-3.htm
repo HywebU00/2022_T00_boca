@@ -95,7 +95,8 @@
                 </div>
                 <!-- Search End -->
                 <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="#">網站導覽</a>
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+                        href="#">網站導覽</a>
                 </noscript>
                 <!-- menu Start -->
                 <nav class="menu" role="navigation" aria-label="Header的導航列">
@@ -273,7 +274,8 @@
                                     <label for="fake-legend" class="form_title" aria-required="true"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr>內容：</label>
                                     <div class="form_content">
                                         <textarea name="" id="fake-legend" cols="30" rows="10">請輸入內容，最多3000個中文字</textarea>
-                                        <div class="notice_info">如使用網頁版（因資安考量，暫未接受附加檔案或照片）無法順利寄出，或有寄送附檔需求，請具名並提供電話及地址，以個人電子信箱寄送至 <a href="mailto:post@boca.gov.tw">post@boca.gov.tw</a>（附件檔案上限為25MB）</div>
+                                        <div class="notice_info">如使用網頁版（因資安考量，暫未接受附加檔案或照片）無法順利寄出，或有寄送附檔需求，請具名並提供電話及地址，以個人電子信箱寄送至 <a href="mailto:post@boca.gov.tw">post@boca.gov.tw</a>（附件檔案上限為25MB）
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form_grp">
@@ -309,8 +311,21 @@
                             <!-- 按鈕 -->
                             <div class="btn_grp">
                                 <button class="btn btn-reset btn-lg">清除</button>
-                                <button class="btn btn-submit btn-lg">完成</button>
+                                <button class="btn btn-submit btn-lg" data-fancybox data-animation-duration="700" data-src="#lightboxstyle">完成</button>
                             </div>
+                            <!-- 燈箱資料start -->
+                            <div class="lightboxblock" id="lightboxstyle">
+                                <div class="title">注意事項</div>
+                                <div class="content">
+                                    <p>您所選的問題分類為「外交部」，請連結至外交部（<a href="https://eyes.mofa.gov.tw/News_Content.aspx?n=7454&sms=12286&s=39"
+                                            target="_blank">https://eyes.mofa.gov.tw/News_Content.aspx?n=7454&sms=12286&s=39</a>）填寫意見內容。</p>
+                                </div>
+                                <div class="btn_grp">
+
+                                    <button class="btn btn-submit btn-lg">確認</button>
+                                </div>
+                            </div>
+                            <!-- 燈箱資料end -->
                         </div>
                         <!-- 填寫資料 end -->
                     </section>
@@ -436,7 +451,8 @@
             <div class="container">
                 <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
                 <div class="footer_info">
-                    <p> 本局地址：100219 臺北市濟南路1段2之2號3~5樓（中央聯合辦公大樓北棟）<br /> 總機電話：(02)2343-2888<br /> 服務時間：申請護照、簽證及文件證明櫃檯受理時間為週一至週五 上午08：30－下午17：00（週六、週日及國定假日不上班）<br />（中午不休息，另申辦護照櫃檯每週三延長辦公時間至20:00止，惟倘遇天災或停電等不可預期情況，本局得視狀況調整（或暫停）受理時間）。</p>
+                    <p> 本局地址：100219 臺北市濟南路1段2之2號3~5樓（中央聯合辦公大樓北棟）<br /> 總機電話：(02)2343-2888<br /> 服務時間：申請護照、簽證及文件證明櫃檯受理時間為週一至週五
+                        上午08：30－下午17：00（週六、週日及國定假日不上班）<br />（中午不休息，另申辦護照櫃檯每週三延長辦公時間至20:00止，惟倘遇天災或停電等不可預期情況，本局得視狀況調整（或暫停）受理時間）。</p>
                     <div class="footer_contact_us"><span>聯絡我們：</span>
                         <ul>
                             <li><a href="#">臺北局本部</a></li>
@@ -492,7 +508,7 @@
     <!-- wow js -->
     <script src="js/wow.min.js"></script>
     <script>
-    new WOW().init();
+        new WOW().init();
     </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

@@ -11833,6 +11833,33 @@ a[href^="https://"] {
   word-break: break-all;
 }
 
+.lightboxblock {
+  display: none;
+  width: 600px;
+}
+@media screen and (max-width: 767px) {
+  .lightboxblock {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .lightboxblock {
+    width: 100vw;
+  }
+}
+.lightboxblock .title {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #1d75ce;
+  font-weight: bold;
+  color: #1d75ce;
+}
+.lightboxblock .fancybox-button {
+  width: 60px;
+  height: 60px;
+}
+
 /* sitemap */
 .sitemap {
   margin: 0px auto 1em;
