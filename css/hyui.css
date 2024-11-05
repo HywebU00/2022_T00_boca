@@ -10359,6 +10359,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 15px;
   padding: 30px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 575px) {
   .travel_block .travel_group .travel_alert_block .alert_block {
@@ -10422,7 +10423,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-weight: bolder;
 }
 .travel_block .travel_group .travel_alert_block .alert_nation_list ul {
-  margin: 20px 20px 40px;
+  margin: 0px 20px 30px;
   padding: 0;
   list-style-type: none;
   font-size: 1.125em;

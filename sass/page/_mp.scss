@@ -703,6 +703,7 @@ a.more {
         border-radius: 15px;
         padding: 30px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-bottom: 30px;
         @include screen('xs_mobile') {
           padding: 30px 20px;
         }
@@ -763,7 +764,7 @@ a.more {
       }
       .alert_nation_list {
         ul {
-          margin: 20px 20px 40px;
+          margin: 0px 20px 30px;
           padding: 0;
           list-style-type: none;
           font-size: 1.125em;
